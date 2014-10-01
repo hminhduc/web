@@ -1,0 +1,56 @@
+<%= form_for(@shozai, html:{class: 'form-horizontal'}) do |f| %>
+  <% if @shozai.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@shozai.errors.count, "error") %> 発生しました:</h2>
+
+      <ul>
+      <% @shozai.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :工番, class: 'col-sm-2 control-label' %>
+    <div class="col-sm-2">
+      <%= f.text_field :所在コード, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :工程, class: 'col-sm-2 control-label' %>
+    <div class="col-sm-2">
+      <div class="input-group">
+          <%= f.text_field :所在名, class: 'form-control' %>
+          <!-- <a class="input-group-addon" href="#koutei_sentaku_modal" data-toggle="modal" data-target="#koutei_sentaku_modal"></a> -->
+          <a class="input-group-addon" href="#koutei_sentaku_modal" data-toggle="modal" data-target="#koutei_sentaku_modal"><span class="glyphicon glyphicon-search"></span></a>
+      </div>
+    </div>
+    <div class="col-sm-2">
+        <label id="shozai_name_display"></label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :作業場所, class: 'col-sm-2 control-label' %>
+    <div class="col-sm-2">
+      <div class="input-group">
+        <%= f.text_field :所在名, class: 'form-control' %>
+        <!-- <a class="input-group-addon" href="#sagyou_sentaku_modal" data-toggle="modal" data-target="#sagyou_sentaku_modal"></a> -->
+        <a class="input-group-addon" href="#sagyou_sentaku_modal" data-toggle="modal" data-target="#sagyou_sentaku_modal"><span class="glyphicon glyphicon-search"></span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-2 col-sm-offset-2">
+      <div class="actions">
+        <%= f.submit '　登　録　', class: 'btn btn-primary' %>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<%= render 'koutei_sentaku' %>
+<%= render 'sagyou_sentaku' %>

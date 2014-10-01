@@ -1,0 +1,26 @@
+
+<table id="koutei_sentaku_table" class="table table-striped table-bordered table-hover" cellspacing="0">
+  <thead>
+    <tr>
+      <th>分類</th>
+      <th>コード</th>
+      <th>工程名</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @kouteis.each do |koutei| %>
+    <tr>
+      <% if koutei.分類 == '1'
+      %>
+      <td>営業</td>
+      <% else %>
+      <td>技術</td>
+      <% end %>
+
+      <td><%= koutei.コード %></td>
+      <td><%= koutei.工程名 %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

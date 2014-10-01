@@ -1,0 +1,15 @@
+<%= javascript_include_tag "lib/shozai.js" %>
+
+<ol class="breadcrumb">
+  <li><%= link_to 'メニュー', main_shozais_path %></li>
+  <li><%= link_to 'JOB管理', shozais_path %></li>
+  <!-- <li><a href="#">セキュリティ管理</a></li> -->
+  <li class="active">新規</li>
+</ol>
+
+<!-- <h1>JOB管理／新規入力</h1> -->
+
+<%= render 'form' %>
+
+<%# link_to '詳 細', @tantosha %>
+<%# link_to '戻 る', tantoshas_path %>

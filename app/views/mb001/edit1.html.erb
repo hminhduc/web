@@ -1,0 +1,17 @@
+<%= javascript_include_tag "lib/mb001.js" %>
+
+<%= title @page_title %>
+
+<ol class="breadcrumb">
+  <li><%= link_to 'メニュー', controller: 'main001', action: 'index' %></li>    
+  <li><a href="#">基準情報</a></li>
+  <li><a href="#">セキュリティ管理</a></li>
+  <li><%= link_to '担当グループマスタ', controller: 'mb001', action: 'index' %></li>
+  <li class="active">担当グループ編集</li>
+</ol>          
+
+<div class="page-header">
+  <h3>担当グループ変更</h3>
+</div>
+
+<%= render 'form_edit' %>

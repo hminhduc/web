@@ -1,0 +1,24 @@
+<%= javascript_include_tag "lib/mb001.js" %>
+
+<%= title @page_title %>
+
+<ol class="breadcrumb">
+  <li><%= link_to 'メニュー', controller: 'main001', action: 'index' %></li>
+  <li><a href="#">基準情報</a></li>
+  <li><a href="#">セキュリティ管理</a></li>
+  <li class="active">担当グループマスタ</li>
+</ol>
+
+<div style="margin-bottom: 15px">
+	<form action="create" method="post">
+		<button type="button" class="btn btn-primary" id="add">　追　加　</button>
+		<button type="button" class="btn btn-primary" id="edit">　編　集　</button>
+		<button type="button" class="btn btn-primary" id="delete">　削　除　</button>
+		<input type="hidden" value="" name="selected_button" id="selected_button">
+		<input type="hidden" value="" name="selected_code" id="selected_code">
+	</form>
+</div>
+<!-- <legend></legend> -->
+<%= render 'table' %>
+<%= render 'edit' %>
+<%= render 'add' %>

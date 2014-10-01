@@ -1,0 +1,678 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"tan",
+				"tantosha"
+			],
+			[
+				"p",
+				"params"
+			],
+			[
+				"fo",
+				"form-horizontal"
+			],
+			[
+				"lo",
+				"location"
+			],
+			[
+				"create",
+				"created"
+			],
+			[
+				"per",
+				"Person"
+			],
+			[
+				"par",
+				"partial"
+			],
+			[
+				"for",
+				"form-control"
+			],
+			[
+				"btn",
+				"btn-default"
+			],
+			[
+				"e",
+				"edit_code"
+			],
+			[
+				"edit",
+				"edit_update"
+			],
+			[
+				"get",
+				"getAjax"
+			],
+			[
+				"ed",
+				"edit_name"
+			],
+			[
+				"edi",
+				"edit_name"
+			],
+			[
+				"w",
+				"when	when …"
+			],
+			[
+				"edit_tanto_group_",
+				"edit_tanto_group_name"
+			],
+			[
+				"sel",
+				"selected_code"
+			],
+			[
+				"bo",
+				"border-radius"
+			],
+			[
+				"ar",
+				"Array"
+			],
+			[
+				"l",
+				"logger"
+			],
+			[
+				"ra",
+				"Rails"
+			],
+			[
+				"db",
+				"db_server"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/Ruby/Ruby.sublime-build",
+	"command_palette":
+	{
+		"height": 389.0,
+		"selected_items":
+		[
+			[
+				"i",
+				"Package Control: Install Package"
+			],
+			[
+				"re",
+				"Package Control: Remove Package"
+			],
+			[
+				"I",
+				"Package Control: Install Package"
+			],
+			[
+				"R",
+				"Package Control: Remove Package"
+			],
+			[
+				"d",
+				"File: Duplicate"
+			],
+			[
+				"dele",
+				"File: Delete"
+			],
+			[
+				"r",
+				"Package Control: Remove Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"sn",
+				"Snippet: render (layout)"
+			],
+			[
+				"sni",
+				"Snippet: form_for text_area"
+			],
+			[
+				"snip",
+				"Snippet: form_for submit"
+			],
+			[
+				"pa",
+				"Package Control: Remove Package"
+			]
+		],
+		"width": 530.0
+	},
+	"console":
+	{
+		"height": 120.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/assets",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/assets/javascripts",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/assets/javascripts/lib",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/assets/stylesheets",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/controllers",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/models",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/layouts",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/login",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/m001in",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/people",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/tantoshas",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/db/migrate",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/lib",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/test/controllers",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/test/fixtures",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/test/helpers",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/tmp/cache",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/tmp/cache/assets",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/tmp/cache/assets/development",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/tmp/pids",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/tmp/sessions",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/tmp/sockets",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/vendor",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/vendor/assets",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/vendor/assets/javascripts",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/vendor/assets/stylesheets"
+	],
+	"file_history":
+	[
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/assets/javascripts/lib/m001main.js",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/config/environment.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/.idea/encodings.xml",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/config/database.yml",
+		"/Users/hoangminhduc/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/assets/stylesheets/application.css",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/assets/javascripts/application.js",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/config/application.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/layouts/application.html.erb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/controllers/m001main_controller.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/m001main/index.html.erb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/assets/javascripts/lib/m001in.js",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/assets/javascripts/lib/mb001.js",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/controllers/tantoshas_controller.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/assets/javascripts/people.js",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/models/tantosha.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/tantoshas/index.html.erb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/tantoshas/_form.html.erb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/tantoshas/show.html.erb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/tantoshas/new.html.erb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/tantoshas/edit.html.erb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/assets/javascripts/lib/tantoshas.js",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/config/routes.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/controllers/application_controller.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/helpers/application_helper.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/assets/stylesheets/application.css.scss",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/tmp/cache/assets/development/sprockets/7159418f5ba38a9ce02f7267646d3c46",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/tmp/cache/assets/development/sprockets/72e7f74f333012145832f2b51cb508d2",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/assets/stylesheets/people.css",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/controllers/people_controller.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/login/edit.html.erb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/people/_form.html.erb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/test/fixtures/tantoshas.yml",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/people/_table_row.html.erb",
+		"/Users/hoangminhduc/Library/Application Support/Sublime Text 3/Packages/OpenFileList/OpenFileList.sublime-settings",
+		"/Users/hoangminhduc/Library/Application Support/Sublime Text 3/Packages/OpenFileList/Default (OSX).sublime-keymap",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/config.ru",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/test/fixtures/people.yml",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/.idea/scopes/scope_settings.xml",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/Gemfile",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/models/person.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/people/show.html.erb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/tantoshas/show.json.jbuilder",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/test/controllers/tantoshas_controller_test.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/db/migrate/20140730062703_create_tantoshas.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/vendor/assets/javascripts/transition.js",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/test/models/person_test.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/vendor/assets/javascripts/dataTables.tableTools.min.js",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/log/development.log",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/mb001/_table.html.erb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/lib/test.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/people/edit.html.erb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/models/担当者マスタ.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/people/show.js.erb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/people/index.html.erb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/担当者マスタ/index.html.erb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/controllers/担当者マスタ_controller.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/people/new.html.erb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/mb001/index.html.erb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/mb001/_edit.html.erb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/controllers/login_controller.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/login/index.html.erb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/login/_form.html.erb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/assets/javascripts/login.js",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/helpers/people_helper.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/assets/javascripts/people.js.coffee",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/test/controllers/people_controller_test.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/test/helpers/people_helper_test.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/db/migrate/20140722101138_create_people.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/people/index.json.jbuilder",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/people/show.json.jbuilder",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/.idea/inspectionProfiles/profiles_settings.xml",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/.idea/runConfigurations/Development__jpt.xml",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/m001tree/_tree.html.erb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/jpt.esproj/Project.espressostorage",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/controllers/mb001_controller.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/assets/stylesheets/bootstrap_config.scss",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/models/mb001/mb001_model_controller.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/lib/pg_helper.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/jpt.esproj/user.hoangminhduc.espressostorage",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/models/m001tree/m001tree_model_controller.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/lib/oracle_helper.rb~",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/Backup/oracle_helper.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/lib/oracle_helper.rb",
+		"/Users/hoangminhduc/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/mb001/_add.html.erb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/m001in/_edit.html.erb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/m001in/index.html.erb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/mb001/add.html.erb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/mb001/_form_edit.html.erb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/mb001/_form_add.html.erb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/models/mb001/mb001_model.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/.ruby-version",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/mb001/edit1.html.erb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/controllers/m001in_controller.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/.idea/misc.xml",
+		"/Users/hoangminhduc/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/config/initializers/secret_token.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/assets/fonts/glyphicons-halflings-regular.svg",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/lib/sys_function.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/tmp/cache/assets/development/sprockets/ae24ba3fdd620ca8ddd0a20370600fe8",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/config/initializers/inflections.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/config/boot.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/Gemfile.lock",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/controllers/base_controller.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/lib/Connection.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/lib/OracleHelper.rb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/views/salary/detail.html.erb",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/lib/publicfunction.rb",
+		"/Users/hoangminhduc/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/hoangminhduc/Library/Application Support/Sublime Text 3/Packages/User/Ruby.sublime-settings",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/assets/stylesheets/content.css",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/WEB給与明細開発関連/SML集計W.sql",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/WEB給与明細開発関連/SML給与明細書T.sql",
+		"/Users/hoangminhduc/workspace/jpt/app/assets/stylesheets/content.css",
+		"/Users/hoangminhduc/Desktop/save.todo",
+		"/Users/hoangminhduc/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
+		"/Users/hoangminhduc/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/Users/hoangminhduc/Library/Application Support/Sublime Text 3/Packages/PlainTasks/messages/Tutorial.todo",
+		"/Users/hoangminhduc/Library/Application Support/Sublime Text 3/Packages/Terminal/Default (OSX).sublime-keymap",
+		"/Users/hoangminhduc/Library/Application Support/Sublime Text 3/Packages/Terminal/Terminal.sublime-settings",
+		"/Users/hoangminhduc/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/Default (OSX).sublime-keymap",
+		"/Users/hoangminhduc/Library/Application Support/Sublime Text 3/Installed Packages/ColorPicker.sublime-package",
+		"/Users/hoangminhduc/Library/Application Support/Sublime Text 3/Packages/AdvancedNewFile/Default (OSX).sublime-keymap",
+		"/Users/hoangminhduc/Library/Application Support/Sublime Text 3/Packages/Alignment/Default (OSX).sublime-keymap",
+		"/Users/hoangminhduc/Library/Application Support/Sublime Text 3/Packages/Alignment/Base File.sublime-settings",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/stylesheets/test.css",
+		"/Users/hoangminhduc/Dropbox/csoftjupiter/project/Web/jpt/app/test.css"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"last_name",
+			"first_name",
+			"end",
+			"validates",
+			"  ",
+			"last_name",
+			"_name",
+			"' ",
+			"Are",
+			"destroy",
+			"col",
+			"horizontal",
+			"tanto_name",
+			"field",
+			"Back",
+			"Show",
+			"Destroy",
+			"Tant",
+			"code",
+			"person",
+			"first_name",
+			"Person",
+			"new_person_path",
+			"create",
+			"id",
+			"show",
+			"edit",
+			"担当グループコード",
+			"table",
+			"GetSystemDateFormat",
+			"width=\"124\"",
+			"salary",
+			"super+shift+c"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"担当者マスタ",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 96.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "jpt.sublime-project",
+	"replace":
+	{
+		"height": 74.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"env",
+				"config/environment.rb"
+			],
+			[
+				"data",
+				"config/database.yml"
+			],
+			[
+				"m001main.",
+				"app/assets/javascripts/lib/m001main.js"
+			],
+			[
+				"a",
+				"app/assets/stylesheets/application.css"
+			],
+			[
+				"rou",
+				"config/routes.rb"
+			],
+			[
+				"peo",
+				"app/assets/javascripts/people.js"
+			],
+			[
+				"tan",
+				"app/models/tantosha.rb"
+			],
+			[
+				"ap",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"app",
+				"app/assets/javascripts/application.js"
+			],
+			[
+				"tantoshasn",
+				"app/views/tantoshas/index.html.erb"
+			],
+			[
+				"tann",
+				"app/controllers/tantoshas_controller.rb"
+			],
+			[
+				"tantoshas",
+				"db/migrate/20140730062703_create_tantoshas.rb"
+			],
+			[
+				"tanto",
+				"test/fixtures/tantoshas.yml"
+			],
+			[
+				"ta",
+				"app/views/people/_table_row.html.erb"
+			],
+			[
+				"people_f",
+				"app/views/people/_form.html.erb"
+			],
+			[
+				"ro",
+				"config/routes.rb"
+			],
+			[
+				"per",
+				"app/models/person.rb"
+			],
+			[
+				"r",
+				"config/routes.rb"
+			],
+			[
+				"mb001index",
+				"app/views/mb001/index.html.erb"
+			],
+			[
+				"logini",
+				"app/views/login/index.html.erb"
+			],
+			[
+				"login",
+				"app/controllers/login_controller.rb"
+			],
+			[
+				"loginc",
+				"app/controllers/login_controller.rb"
+			],
+			[
+				"people",
+				"app/views/people/edit.html.erb"
+			],
+			[
+				"people.js",
+				"app/assets/javascripts/people.js"
+			],
+			[
+				"peoplesho",
+				"app/views/people/show.html.erb"
+			],
+			[
+				"pindex",
+				"app/views/people/index.html.erb"
+			],
+			[
+				"_table_",
+				"app/views/people/_table_row.html.erb"
+			],
+			[
+				"_form",
+				"app/views/people/_form.html.erb"
+			],
+			[
+				"application.",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"mb001in",
+				"app/views/mb001/index.html.erb"
+			],
+			[
+				"mb001",
+				"app/assets/javascripts/lib/mb001.js"
+			],
+			[
+				"m001main",
+				"app/controllers/m001main_controller.rb"
+			],
+			[
+				"mb001.j",
+				"app/assets/javascripts/lib/mb001.js"
+			],
+			[
+				"rout",
+				"config/routes.rb"
+			],
+			[
+				"mb001i",
+				"app/views/mb001/index.html.erb"
+			],
+			[
+				"mb001.",
+				"app/assets/javascripts/lib/mb001.js"
+			],
+			[
+				"m001inin",
+				"app/views/m001in/index.html.erb"
+			],
+			[
+				"m001in.",
+				"app/assets/javascripts/lib/m001in.js"
+			],
+			[
+				"m001ini",
+				"app/views/m001in/index.html.erb"
+			],
+			[
+				"da",
+				"config/database.yml"
+			],
+			[
+				"inde",
+				"app/views/login/index.html.erb"
+			],
+			[
+				"ind",
+				"app/views/login/index.html.erb"
+			],
+			[
+				"conn",
+				"lib/Connection.rb"
+			],
+			[
+				"ora",
+				"lib/OracleHelper.rb"
+			],
+			[
+				"conte",
+				"app/assets/stylesheets/content.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 375.0,
+		"selected_items":
+		[
+			[
+				"",
+				"pf_csv_cut"
+			]
+		],
+		"width": 378.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 291.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @user.担当者コード %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.担当者名称 %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @user.パスワード %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

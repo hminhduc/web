@@ -1,0 +1,33 @@
+<%= form_for @kouteimaster, html:{class: 'form-horizontal', role: :form, 'data-model' => 'kouteimaster'} do |f| %>
+  <% if @kouteimaster.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @kouteimaster.errors.count %> エラーが発生しました:</h2>
+
+      <ul>
+      <% @kouteimaster.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :工程コード, class: 'col-sm-2 control-label' %>
+    <div class="col-sm-2">
+      <%= f.text_field :コード, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :工程名, class: 'col-sm-2 control-label' %>
+    <div class="col-sm-2">
+      <%= f.text_field :工程名, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-2 col-sm-offset-2">
+      <%= f.submit '　登録　', class: 'btn btn-primary'  %>
+    </div>
+  </div>
+<% end %>

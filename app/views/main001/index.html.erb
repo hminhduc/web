@@ -1,0 +1,31 @@
+<%= title @page_title %>
+
+
+<ol class="breadcrumb">
+  <li><%= link_to 'メニュー', controller: 'main001', action: 'index' %></li>    
+  <li><a href="#">基準情報</a></li>
+  <li><a href="#">セキュリティ管理</a></li>
+  <li class="active">担当者</li>
+</ol>
+
+	<div class="row">
+<!-- 		<div class="col-md-5">
+			
+			<div class="well">
+				<button type="button" class="btn btn-primary">
+					　展 開　
+				</button>
+			</div>
+		</div>
+ -->
+		<div class="col-md-7">
+			<!-- <div class="well"> -->
+			<ul class="list-group">
+				<li class="list-group-item"><%= link_to '担当者マスタ（未対応）', controller: 'mb002', action: 'index'%></li>
+				<li class="list-group-item"><%= link_to '担当グループマスタ', controller: 'mb001', action: 'index'%>	</li>
+				<li class="list-group-item"><%= link_to '構成マスタ', controller: 'm001main', action: 'index'%>	</li>
+				<li class="list-group-item"><%= link_to '工順マスタ', controller: 'mb001', action: 'index'%>	</li>
+			</ul>
+			<!-- </div> -->
+		</div>
+	</div>

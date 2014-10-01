@@ -1,0 +1,23 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ * require_self
+
+ *= require custom.css.scss
+
+ * require bootstrap.css
+ * require bootstrap.min.css
+
+ * require jquery.dataTables.css
+ *= require dataTables.bootstrap.css
+ *= require dataTables.tableTools.min.css
+ *= require dataTables.fixedColumns.css
+ *= require dataTables.scroller.css
+
+ *= require style.min.css
+
+ *= require bootstrap-datetimepicker.css
+
+ * require_tree .
+*/

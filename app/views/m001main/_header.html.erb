@@ -1,0 +1,90 @@
+<!-- <form class="form-horizontal" action="/index" role="form"> -->
+	<div class="col-md-6">
+
+  	<div class="form-group">
+    	<label for="kozososiki_label" class="col-sm-2 control-label">工場組織：</label>
+    	<div class="col-xs-3">
+      	<input type="text" class="form-control" id="header_kozo" maxlength="10" name="m001main[kozo_code]" placeholder="工場組織コード" value=<%= @hash['kozo_code'] %>>
+    	</div>
+    	<div class="col-xs-5">
+      	<input type="text" class="form-control" id="header_kozo_name" name="m001main[kozo_name]" placeholder="工場組織名称" value=<%= @hash['kozo_name'] %>>
+    	</div>
+  	</div>
+
+	  <div class="form-group">
+	    <label for="hinme_label" class="col-sm-2 control-label">品目：</label>
+	    <div class="col-xs-4">
+				<div class="input-group">
+		      <input type="text" class="form-control" id="header_hinme" maxlength="10" name="m001main[hinme_code]" placeholder="品目コード" value=<%= @hash['hinme_code'] %>>
+            <a class="input-group-addon" href="#pw_hin" data-toggle="modal" data-target="#pw_hin"><span class="glyphicon glyphicon-search"></a>					
+				</div>    
+	    </div>
+    	<div class="col-xs-5">
+      	<input type="text" class="form-control" id="header_hinme_name" name="m001main[hinme_name]" placeholder="品目名称" value=<%= @hash['hinme_name'] %>>
+    	</div>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="kijunbi_label" class="col-sm-2 control-label">基準日：</label>
+	    <div class="col-md-4">
+        <div class='input-group date' id='datetimepicker5' data-date-format="YYYY/MM/DD">
+            <input type='text' class="form-control" maxlength="10" id="header_kijunbi" name="m001main[kijunbi]" placeholder="2012/01/17" value=<%= @hash['kijunbi'] %> >
+            <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+        </div>
+	    </div>
+	  </div>
+
+	</div>
+
+	<div class="col-md-6">
+	  <div class="form-group">
+	    <label for="tani_label" class="col-sm-2 control-label">荷姿単位：</label>
+	    <div class="col-md-3">
+		    <div class="input-group">
+				  <input class="form-control" id="header_tani" maxlength="4" size="4" type="text" name="m001main[nisugata]" value=<%= @hash['nisugata'] %>>
+			    <span class="input-group-addon dropdown-toggle" data-toggle="dropdown">
+			        <span class="caret"></span>
+			    </span>
+			    <ul class="dropdown-menu" id="tani_select">
+			    </ul>
+		    </div>
+			</div>
+	  </div>
+
+	  <!-- <div class="form-group">
+	    <label for="tani_label" class="col-sm-2 control-label">荷姿単位：</label>
+	    <div class="col-md-2">
+		    <input class="form-control" id="header_tani" size="4" type="text">
+	    </div>
+      <div class="input-append btn-group">
+		    <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
+		        <span class="caret"></span>
+		    </a>
+		    <ul class="dropdown-menu" id="tani_select">
+		        <li><a href="#"> test </a></li>
+		        <li class="divider"></li>
+		        <li><a href="#"><i class="i"></i> Make admin</a></li>
+		    </ul>
+			</div>
+	  </div>
+ --> 
+	  <p><br></p>
+	  <p><br></p>
+
+		<div class="col-md-8 col-md-offset-4"  style="margin-bottom: 20px">
+			
+			<button type="submit" class="btn btn-primary" id="search">　検　索　</button>
+			<button type="submit" class="btn btn-primary" id="cancel">キャンセル</button>
+			<!-- Button trigger modal -->
+			<button type="button" class="btn btn-primary" id="close" data-toggle="modal" data-target="#msgbox" >　閉じる　</button>
+
+		</div>
+	</div>
+<!-- </form> -->
+
+<!-- Messagebox -->
+<%= render 'messagebox' %>
+<!-- pw_hin -->
+<%= render 'pw_hin' %>
+
+<legend></legend>

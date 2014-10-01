@@ -1,0 +1,39 @@
+<%= form_for(@tantosha, html:{class: 'form-horizontal'}) do |f| %>
+  <% if @tantosha.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tantosha.errors.count, "error") %> 発生しました:</h2>
+
+      <ul>
+      <% @tantosha.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :担当者コード, class: 'col-sm-2 control-label' %>
+    <div class="col-sm-2">
+      <%= f.text_field :tanto_code, class: 'form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :担当者名称, class: 'col-sm-2 control-label' %>
+    <div class="col-sm-2">
+      <%= f.text_field :tanto_name, class: 'form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :パスワード, class: 'col-sm-2 control-label' %>
+    <div class="col-sm-2">
+      <%= f.text_field :password, class: 'form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-2 col-sm-offset-2">
+      <div class="actions">
+        <%= f.submit '　登　録　', class: 'btn btn-primary' %>
+      </div>
+    </div>
+  </div>
+<% end %>

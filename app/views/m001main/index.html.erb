@@ -1,0 +1,15 @@
+<%= javascript_include_tag "lib/m001main.js" %>
+
+<title><%=  @page_title%></title>
+
+<ol class="breadcrumb">
+  <li><%= link_to 'メニュー', controller: 'main001', action: 'index' %></li>    
+  <li><a href="#">基準情報</a></li>
+  <li><a href="#">レシビ管理</a></li>
+  <li class="active">構成マスタ</li>
+</ol>          
+	
+<form class="form-horizontal" action="index" method="post" role="form">
+<%= render 'header' %>
+<%= render 'main' %>
+</form>

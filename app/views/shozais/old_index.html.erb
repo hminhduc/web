@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col-sm-3 col-sm-offset-5">
+    <h1>竹中様の所在入力</h1>
+  </div>
+</div>
+<%= form_for :shozai, url: shozais_select_path, html:{class: 'form-horizontal'} do |f| %>
+
+<div class="row">
+  <div class="col-sm-1 col-sm-offset-4">
+    <div class="btn btn-info"
+      <label>　　　　</label><br>
+      <label>　　　　</label><br>
+      <label>　　　　</label><br>
+      <label>　　　　</label><br>
+      <label>　　　　</label><br>
+      <label>　　　　</label><br>
+      <label>　　　　</label><br>
+      <label>　　　　</label><br>
+      <label>区分選択</label><br>
+      <label>　　　　</label><br>
+      <label>　　　　</label><br>
+      <label>　　　　</label><br>
+      <label>　　　　</label><br>
+      <label>　　　　</label><br>
+      <label>　　　　</label><br>
+      <label>　　　　</label><br>
+      <label>　　　　</label>
+
+    </div>
+  </div>
+  <div class="col-sm-2">
+  <% @shozais.each do |shozai| %>
+    <input type="radio" id="kubunshentaku" name="shozai" value="<%= shozai.所在名 %>"> <%= shozai.所在名 %><br>
+    <% end %>
+    <br>
+    <br>
+    <br>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-1 col-sm-offset-5">
+    <%= f.button '　ＯＫ　', class: 'btn btn-primary' %>
+  </div>
+<% end %>
+  <div class="col-sm-1">
+    <%= button_to 'キャンセル', users_login_path, class: 'btn btn-default' %>
+  </div>
+</div>
