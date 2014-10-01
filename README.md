@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Jpt
 =========
 
@@ -137,3 +138,9 @@ License
 --
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+=======
+jpt
+===
+
+for my testing web app
+>>>>>>> 29a789b... Initial commit
