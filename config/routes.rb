@@ -64,4 +64,5 @@ Jpt::Application.routes.draw do
 	# resources :user do
 	#   resource :login, controller: 'user/login'
 	# end
+  # Test with it and modify now
 end
