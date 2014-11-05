@@ -85,28 +85,28 @@ class UsersController < ApplicationController
   def change_pass_exc
     @user = User.find_by(担当者コード: params[:user][:担当者コード].downcase,パスワード: params[:user][:パスワード])
     if !@user.nil?
-        if params[:user][:新パスワード] == params[:user][:もう一度新パスワード]
-          @user.update(パスワード: params[:user][:新パスワード])
-          redirect_to root_url
-        else
-          flash.now[:error] = '新パスワードともう一度パスワードが異なります。'
-          render 'change_pass'
-        end
+      if params[:user][:新パスワード] == params[:user][:もう一度新パスワード]
+        @user.update(パスワード: params[:user][:新パスワード])
+        redirect_to root_url
+      else
+        flash.now[:error] = '新パスワードともう一度パスワードが異なります。'
+        render 'change_pass'
+      end
     else
-        respond_to do |format|
-          format.html {redirect_to action: 'change_pass'}
-        end
+      respond_to do |format|
+        format.html {redirect_to action: 'change_pass'}
+      end
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_user
-      @user = User.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_user
+    @user = User.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def user_params
-      params.require(:user).permit(:担当者コード, :担当者名称, :パスワード)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def user_params
+    params.require(:user).permit(:担当者コード, :担当者名称, :パスワード)
+  end
 end

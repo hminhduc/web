@@ -13,9 +13,9 @@ class ShozaisController < ApplicationController
   end
 
   def new
-   @shozai = Shozai.new
-   @kouteis = Kouteimaster.all
-   @sagyous = Sagyou.all
+    @shozai = Shozai.new
+    @kouteis = Kouteimaster.all
+    @sagyous = Sagyou.all
   end
 
   def main
