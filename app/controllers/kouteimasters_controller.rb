@@ -71,6 +71,6 @@ class KouteimastersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def kouteimaster_params
-      params.require(:kouteimaster).permit(:コード, :工程名)
+      params.require(:kouteimaster).permit(:コード, :工程名, :分類)
     end
 end
