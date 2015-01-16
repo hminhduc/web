@@ -9,7 +9,7 @@ $(document).ready(function(){
     },
     "columnDefs": [
       {
-        "targets": [2,3,4],
+        "targets": [3,4,5],
         "width": '15px'
       }
     ]
