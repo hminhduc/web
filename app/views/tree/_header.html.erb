@@ -1,0 +1,86 @@
+<!-- <form class="form-horizontal" action="/index" role="form"> -->
+	<div class="col-md-6">
+
+  	<div class="form-group">
+    	<label for="kozososiki_label" class="col-sm-2 control-label">工場組織：</label>
+    	<div class="col-xs-3">
+      	<input type="text" class="form-control" id="header_kozo" name="m001tree[kozo_code]" placeholder="工場組織コード" value=<%= @m001tree['kozo_code'] %> maxlength = 10>
+    	</div>
+    	<div class="col-xs-5">
+      	<input type="text" class="form-control" id="header_kozo_name" name="m001tree[kozo_name]" placeholder="工場組織名称" value=<%= @m001tree['kozo_name'] %>>
+    	</div>
+  	</div>
+
+	  <div class="form-group">
+	    <label for="hinme_label" class="col-sm-2 control-label">品目：</label>
+	    <div class="col-xs-3">
+	      <input type="text" class="form-control" id="header_hinme" name="m001tree[hinme_code]" placeholder="品目コード" value=<%= @m001tree['hinme_code'] %> maxlength = 10>
+	    </div>
+    	<div class="col-xs-5">
+      	<input type="text" class="form-control" id="header_hinme_name" name="m001tree[hinme_name]" placeholder="品目名称" value=<%= @m001tree['hinme_name'] %>>
+    	</div>
+	    <button type="button" class="btn btn-default" id="hinme_search">🔎</button>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="kijunbi_label" class="col-sm-2 control-label">基準日：</label>
+	    <div class="col-md-4">
+        <div class='input-group date' id='datetimepicker5' data-date-format="YYYY/MM/DD">
+            <input type='text' class="form-control" id="header_kijunbi" name="m001tree[kijunbi]" placeholder="2012/01/17" value=<%= @m001tree['kijunbi'] %> >
+            <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span>
+            </span>
+        </div>
+	    </div>
+	  </div>
+
+	</div>
+
+	<div class="col-md-6">
+	  <div class="form-group">
+	    <label for="tani_label" class="col-sm-2 control-label">荷姿単位：</label>
+	    <div class="col-md-3">
+		    <div class="input-group">
+				  <input class="form-control" id="header_tani" size="4" type="text" name="m001tree[nisugata]" value=<%= @m001tree['nisugata'] %>>
+			    <span class="input-group-addon dropdown-toggle" data-toggle="dropdown">
+			        <span class="caret"></span>
+			    </span>
+			    <ul class="dropdown-menu" id="tani_select">
+			    </ul>
+		    </div>
+			</div>
+	  </div>
+
+	  <!-- <div class="form-group">
+	    <label for="tani_label" class="col-sm-2 control-label">荷姿単位：</label>
+	    <div class="col-md-2">
+		    <input class="form-control" id="header_tani" size="4" type="text">
+	    </div>
+      <div class="input-append btn-group">
+		    <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
+		        <span class="caret"></span>
+		    </a>
+		    <ul class="dropdown-menu" id="tani_select">
+		        <li><a href="#"> test </a></li>
+		        <li class="divider"></li>
+		        <li><a href="#"><i class="i"></i> Make admin</a></li>
+		    </ul>
+			</div>
+	  </div>
+ --> 
+	  <p><br></p>
+	  <p><br></p>
+
+		<div class="col-md-8 col-md-offset-4"  style="margin-bottom: 5px">
+			
+			<button type="submit" class="btn btn-primary" id="search">　検　索　</button>
+			<button type="submit" class="btn btn-primary" id="cancel">キャンセル</button>
+			<button type="submit" class="btn btn-primary" id="close">　閉じる　</button>
+			<input  type="hidden" value="" name="m001tree[selected_button]" id="selected_button">
+
+		</div>
+	</div>
+<!-- </form> -->
+
+<legend></legend>
+
+<%= render 'hinme_search_modal' %>

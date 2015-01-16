@@ -2,7 +2,6 @@
   <% if @kouteimaster.errors.any? %>
     <div id="error_explanation">
       <h2><%= @kouteimaster.errors.count %> エラーが発生しました:</h2>
-
       <ul>
       <% @kouteimaster.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -29,5 +28,7 @@
     <div class="col-sm-2 col-sm-offset-2">
       <%= f.submit '　登録　', class: 'btn btn-primary'  %>
     </div>
-  </div>
+  </div>  
 <% end %>
+
+<!--this line is added on ipad by Mr.Duc-->

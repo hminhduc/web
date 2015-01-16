@@ -1,0 +1,20 @@
+<h2>CSVファイルを読み込み</h2>
+
+<form name="folderForm">
+    <input type=file name="file">
+    <input type=text name="folderLocation">
+    <input type=button value="Get Folder" onclick="javascript:GetFolder();">
+</form>
+
+<script type="text/javascript">
+	function GetFolder() {
+	    document.folderForm.folderLocation.value=document.folderForm.file.value;
+	}
+</script>
+
+<h2>ファイルアップロード</h2>
+<%= form_tag action: 'uploadFile', multipart: true do %>
+<%= label_tag :upload_file, "Select File" %>
+<%= file_field 'upload', 'datafile' %></p>
+<%= submit_tag "Upload" %>
+<% end %>

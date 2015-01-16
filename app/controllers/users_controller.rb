@@ -33,12 +33,14 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.nil?
         Rails.logger.info 'login unsuccess'
+        flash.now[:notice] = "社員番号とパスワードを正しく入力してください。"
         # Create an error message and re-render the signin form.
         format.html {render action: 'login', notice: 'unsuccess'}
       else
         # Sign the user in and redirect to the user's show page.
         Rails.logger.info 'login success'
-        format.html { redirect_to main_shozais_url }
+        # format.html { redirect_to main_shozais_url }
+        format.html { redirect_to main_url }
       end
     end
     # @user = User.new(user_params)
