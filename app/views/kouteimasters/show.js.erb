@@ -1,2 +1,5 @@
-// remove from selected id
-$('#koutei_<%= @kouteimaster.id %>').remove();
+console.log("hi every one!");
+
+// $input = $('input[name="' + model + '[' + field + ']"]');
+$input = $('input[name="kouteimaster[工程名]"]')
+$input.closest('.form-group').addClass('has-error').find('.help-block').html( "を入力してください" );

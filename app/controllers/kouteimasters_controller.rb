@@ -31,9 +31,12 @@ class KouteimastersController < ApplicationController
       if @kouteimaster.save
         format.html { redirect_to @kouteimaster, notice: '新規成功出来ました。' }
         format.json { render action: 'show', status: :created, location: @kouteimaster }
+        format.js { render action: 'show', status: :created, location: @kouteimaster }
       else
         format.html { render action: 'new' }
         format.json { render json: @kouteimaster.errors, status: :unprocessable_entity }
+        # format.js { render json: @kouteimaster.errors, status: :unprocessable_entity }
+        format.js { render 'show' }
       end
     end
   end

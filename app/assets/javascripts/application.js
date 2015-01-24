@@ -12,6 +12,7 @@
 //
 //
 // require turbolinks
+
 //= require jquery-2.1.1.min.js
 //= require jquery_ujs
 //= require bootstrap.min.js
@@ -31,5 +32,6 @@
 //= require bootstrap-datetimepicker.ja.js
 
 //= require bootstrap-maxlength.js
+//= require kouteimasters.js.coffee
 
 // require_tree .
