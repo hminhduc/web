@@ -35,8 +35,8 @@ class KouteimastersController < ApplicationController
       else
         format.html { render action: 'new' }
         format.json { render json: @kouteimaster.errors, status: :unprocessable_entity }
-        # format.js { render json: @kouteimaster.errors, status: :unprocessable_entity }
-        format.js { render 'show' }
+        format.js { render json: @kouteimaster.errors, status: :unprocessable_entity }
+        # format.js { render 'show' }
       end
     end
   end

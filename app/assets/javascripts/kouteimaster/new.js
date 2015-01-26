@@ -1,47 +1,18 @@
-//$(document).ready(function(){
-$(function(){
-
-  oTable = $('#kouteimaster').DataTable({
-    "pagingType": "full_numbers",
-    "scrollX": true,
-    "scrollCollapse": true,
-    "oLanguage":{
-      "sUrl": "../../assets/resource/dataTable_ja.txt"
-    },
-    "columnDefs": [
-      {
-        "targets": [3,4,5],
-        "width": '15px'
-      }
-    ]
-  });
-
-	//選択された行を判断
-	$('#kouteimaster tbody').on( 'click', 'tr', function () {
-
-    if ( $(this).hasClass('selected') ) {
-        $(this).removeClass('selected');
-        $(this).removeClass('success');
-    }
-    else {
-        oTable.$('tr.selected').removeClass('selected');
-        oTable.$('tr.success').removeClass('success');
-        $(this).addClass('selected');
-        $(this).addClass('success');
-    }
-
-	} );
-});
+/**
+ * Created by cmc on 1/26/15.
+ */
 
 //for handle ajax error
 $(function () {
-    console.log('ready');
-
     $(document).bind('ajaxError', 'form#new_kouteimaster', function (event, jqxhr, settings, exception) {
         // note: jqxhr.responseJSON undefined, parsing responseText instead
         $(event.data).render_form_errors($.parseJSON(jqxhr.responseText));
-        console.log('document.ready');
     });
+
+    //$(document).bind('ajaxSuccess', 'form#new_kouteimaster', function (event, jqxhr, settings, exception) {
+    //    // note: jqxhr.responseJSON undefined, parsing responseText instead
+    //    $(location).attr('href','/kouteimasters');
+    //});
 });
 
 //defind ref functions
@@ -70,7 +41,6 @@ $(function () {
             $input = $('input[name="' + model + '[' + field + ']"]');
             $input.closest('.form-group').addClass('has-error').find('.help-block').html( messages.join(' & ') );
         });
-        console.log('render_form_error');
     };
 
     $.fn.clear_previous_errors = function(){
