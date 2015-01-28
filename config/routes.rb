@@ -25,6 +25,6 @@ Jpt::Application.routes.draw do
 	match 'uploadFile', to: 'tree#upload', via: [:get,:post]
 	match 'email', to: 'tree#email', via: [:get,:post]
 	match 'emailxhr', to: 'tree#emailxhr', via: [:post]
-	match 'scroll', to: 'tree#scroll', via: [:get,:post]
+	match 'scroll', to: 'tree#scroll', via: [:post]
 
 end

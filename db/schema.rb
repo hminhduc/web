@@ -16,20 +16,20 @@ ActiveRecord::Schema.define(version: 20140911071222) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "customers", force: true do |t|
+  create_table "customers", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "orders", force: true do |t|
+  create_table "orders", force: :cascade do |t|
     t.integer  "customer_id"
     t.datetime "order_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "people", force: true do |t|
+  create_table "people", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.string   "password"
@@ -37,14 +37,14 @@ ActiveRecord::Schema.define(version: 20140911071222) do
     t.datetime "updated_at"
   end
 
-  create_table "作業場所マスタ", force: true do |t|
+  create_table "作業場所マスタ", force: :cascade do |t|
     t.string   "作業場所コード"
     t.string   "作業場所名"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "工程マスタ", force: true do |t|
+  create_table "工程マスタ", force: :cascade do |t|
     t.string   "分類"
     t.string   "コード"
     t.string   "工程名"
@@ -52,14 +52,14 @@ ActiveRecord::Schema.define(version: 20140911071222) do
     t.datetime "updated_at"
   end
 
-  create_table "所在マスタ", force: true do |t|
+  create_table "所在マスタ", force: :cascade do |t|
     t.string   "所在コード"
     t.string   "所在名"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "担当者マスタ", force: true do |t|
+  create_table "担当者マスタ", force: :cascade do |t|
     t.string   "担当者コード"
     t.string   "担当者名称"
     t.string   "パスワード"
