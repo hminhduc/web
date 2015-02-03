@@ -89,5 +89,9 @@ class TreeController < ApplicationController
 	def scroll
 		
 	end
-	
+
+	def multiselect
+
+	end
+
 end
