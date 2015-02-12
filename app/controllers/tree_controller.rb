@@ -91,6 +91,7 @@ class TreeController < ApplicationController
 	end
 
 	def multiselect
+		# get all record
 		@employers = Employer.all
 	end
 
