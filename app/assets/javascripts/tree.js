@@ -74,6 +74,7 @@ $(function(){
 		$('#header_hinme').val(hinme_search_code);
 		$('#header_hinme_name').val(hinme_search_name);
 	});
+
 });
 
 //date field click handler
