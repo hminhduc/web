@@ -93,6 +93,17 @@ class TreeController < ApplicationController
 	def multiselect
 		# get all record
 		@employers = Employer.all
+
+		if request.post?
+			params[:delete].each do |id,value|
+				Employer.find(id.to_i).destroy
+			end
+			respond_to do |format|
+				format.html{}
+				format.json{}
+				format.js{}
+			end
+		end
 	end
 
 end

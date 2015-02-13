@@ -26,6 +26,6 @@ Jpt::Application.routes.draw do
 	match 'email', to: 'tree#email', via: [:get,:post]
 	match 'emailxhr', to: 'tree#emailxhr', via: [:post]
 	match 'scroll', to: 'tree#scroll', via: [:get,:post]
-	match 'multiselect', to: 'tree#multiselect', via: [:get]
+	match 'multiselect', to: 'tree#multiselect', via: [:get,:post]
 
 end

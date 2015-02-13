@@ -6,12 +6,13 @@
   <li class="active">Multiselect</li>
 </ol>
 
-<h1>Mutliselect</h1>
+<h1>マルティセレクト（複数選択）</h1>
 <%= form_for :employer, remote: true do |f| %>
 <div class="col-md-3 col-md-offset-2"> </div>
 <div class="btn-group" role="group" aria-label="...">
-  <button type="button" class="btn btn-default">Left</button>
-  <button type="button" class="btn btn-default">Middle</button>
+  <button type="button" class="btn btn-default">　
+  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>　
+  </button>
   <button type="submit" class="btn btn-default">　
     <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>　
   </button>
@@ -46,9 +47,8 @@
   <tbody>
   <% @employers.each do |employwer| %>
   <tr>
-    <!--<th><input type="checkbox" aria-label="..."></th>-->
     <th><%= check_box_tag "delete[#{employwer.id}]", 1 %></th>
-    <td><%= employwer.first_name %></td>
+    <td><a href="" > <%= employwer.first_name %></a></td>
     <td><%= employwer.position %></td>
     <td><%= employwer.office %></td>
     <td><%= employwer.age %></td>
