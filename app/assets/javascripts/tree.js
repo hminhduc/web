@@ -69,10 +69,15 @@ $(function(){
 		$('#hinme_search_modal').modal('show');
 	});
 
-	//OK from Search 
+	//OK from Search
 	$('#btn_hinme_search_ok').click(function(){
 		$('#header_hinme').val(hinme_search_code);
 		$('#header_hinme_name').val(hinme_search_name);
+	});
+
+	// Show new employer modal
+	$('#add_new_employer').click(function(){
+		$('#new_employer_modal').modal('show');
 	});
 
 });

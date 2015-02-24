@@ -94,7 +94,7 @@ class TreeController < ApplicationController
 		# get all record
 		@employers = Employer.all
 
-		if request.post?
+		if request.post? and !params[:delete].nil?
 			params[:delete].each do |id,value|
 				Employer.find(id.to_i).destroy
 			end

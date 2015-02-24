@@ -49,8 +49,8 @@ module Jpt
     config.assets.paths << "#{Rails.root}/vendor/assets"
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
     # Add the fonts path
-    config.assets.paths << Rails.root.join('app','assets','fonts')
-
+    # config.assets.paths << Rails.root.join('app','assets','fonts')
+    config.assets.paths += %W("#{Rails.root}/vendor/assets/fonts")
     # config.assets.paths << File.join(Rails.root, '/vendor/assets')
     # Add the fonts path
     # config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
