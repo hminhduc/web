@@ -1,7 +1,5 @@
 <%# Conditionally set remote: true. Also, passing model name as data attribute %>
-<% modal ||= false %>
-<% remote = modal ? true : false %>
-<%= form_for(@person, remote: remote, html: {role: :form, 'data-model' => 'person'}) do |f| %>
+<%= form_for(:person , html: {role: :form, 'data-model' => 'person'}) do |f| %>
 
     <%# Added Bootstrap classes, and help-block container for error messages %>
     <div class="form-group">
