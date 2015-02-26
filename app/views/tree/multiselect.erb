@@ -13,7 +13,7 @@
   <button id="add_new_employer" type="button" class="btn btn-default">　
   <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>　
   </button>
-  <button type="submit" class="btn btn-default">　
+  <button type="submit" class="btn btn-default" name="multidelete">　
     <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>　
   </button>
 </div>
@@ -117,7 +117,7 @@
 
         <%# Added Bootstrap classes %>
         <div class="actions">
-          <%= f.submit '追加', class: 'btn btn-default' %>
+          <%= f.submit '追加', class: 'btn btn-default', name: 'add' %>
         </div>
       </div>
       <div class="modal-footer">

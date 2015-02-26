@@ -127,13 +127,20 @@ rails generate controller Shozai index
 rails g scaffold Person first_name:string last_name:string
 rake db:migrate
 ```
+
 rollback
 `rake db:migrate:down VERSION=20100905201547`
+
 Create a new migration and run rake db:migrate
+
 `rails g migration change_table`
+
 View router path in current webapp
+
 `rake routes`
+
 Create a seeds.rb on db folder and write insert code to auto insert data to table
+
 `rake db:seed`
 
 #8.rails

@@ -106,4 +106,32 @@ class TreeController < ApplicationController
 		end
 	end
 
+	def create_employer
+		@employer = Employer.new(employer_params)
+
+		respond_to do |format|
+			if @employer.save
+				format.html { redirect_to @kouteimaster, notice: '新規成功出来ました。' }
+				format.json { render action: 'show', status: :created, location: @kouteimaster }
+				format.js { render action: 'show', status: :created, location: @kouteimaster }
+			else
+				format.html { render action: 'new' }
+				format.json { render json: @kouteimaster.errors, status: :unprocessable_entity }
+				format.js { render json: @kouteimaster.errors, status: :unprocessable_entity }
+				# format.js { render 'show' }
+			end
+		end
+	end
+
+	private
+	# Use callbacks to share common setup or constraints between actions.
+	def set_employer
+		@employer = Employer.find(params[:id])
+	end
+
+	# Never trust parameters from the scary internet, only allow the white list through.
+	def employer_params
+		params.require(:employer).permit(:first_name, :position, :office, :start_date, :age, :salary)
+	end
+
 end
