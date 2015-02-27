@@ -19,7 +19,7 @@ class TreeController < ApplicationController
 		record['ツリー順序']='2'
 		record['品目区分']='4'
 		@records[1] = record
-		
+
 		record = {}
 		record['端末番号']=452267
 		record['表示ラベル']='30011093  豚の生姜焼95G 20*2            梱    '
@@ -94,30 +94,32 @@ class TreeController < ApplicationController
 		# get all record
 		@employers = Employer.all
 
-		if request.post? and !params[:delete].nil?
-			params[:delete].each do |id,value|
-				Employer.find(id.to_i).destroy
-			end
-			respond_to do |format|
-				format.html{}
-				format.json{}
-				format.js{}
-			end
-		end
+		# if request.post?
+		# 	if !params[:delete].nil?
+		# 		params[:delete].each do |id,value|
+		# 			Employer.find(id.to_i).destroy
+		# 		end
+		# 		respond_to do |format|
+		# 			format.html{}
+		# 			format.json{}
+		# 			format.js{}
+		# 		end
+		# 	end
+		# end
 	end
 
-	def create_employer
+	def employer
 		@employer = Employer.new(employer_params)
 
 		respond_to do |format|
 			if @employer.save
-				format.html { redirect_to @kouteimaster, notice: '新規成功出来ました。' }
-				format.json { render action: 'show', status: :created, location: @kouteimaster }
-				format.js { render action: 'show', status: :created, location: @kouteimaster }
+				format.html { redirect_to @employer, notice: '新規成功出来ました。' }
+				format.json { render action: 'show', status: :created, location: @employer }
+				format.js { render action: 'show', status: :created, location: @employer }
 			else
 				format.html { render action: 'new' }
-				format.json { render json: @kouteimaster.errors, status: :unprocessable_entity }
-				format.js { render json: @kouteimaster.errors, status: :unprocessable_entity }
+				format.json { render json: @employer.errors, status: :unprocessable_entity }
+				format.js { render json: @employer.errors, status: :unprocessable_entity }
 				# format.js { render 'show' }
 			end
 		end
@@ -131,7 +133,7 @@ class TreeController < ApplicationController
 
 	# Never trust parameters from the scary internet, only allow the white list through.
 	def employer_params
-		params.require(:employer).permit(:first_name, :position, :office, :start_date, :age, :salary)
+		params.require(:employer).permit(:first_name, :position, :office, :age, :start_date, :salary)
 	end
 
 end
