@@ -1,0 +1,11 @@
+//hide modal
+    $('#new_employer_modal').modal('hide');
+//add row
+    $('#multiselect_table').append("<%= j render partial: 'table_row', locals: {employer: @employer } %>");
+
+//refresh the page
+window.location.reload();
+
+//clear modal field
+
+//clear modal error

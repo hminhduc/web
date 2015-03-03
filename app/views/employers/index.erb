@@ -1,4 +1,4 @@
-<%= javascript_include_tag 'tree' %>
+<%= javascript_include_tag 'employer' %>
 <ol class="breadcrumb">
   <li><%= link_to 'メニュー', main_path %></li>
   <!-- <li><a href="#">基準情報</a></li> -->
@@ -7,7 +7,7 @@
 </ol>
 
 <h1>マルティセレクト（複数選択）</h1>
-<%= form_for @employer, url: employer_path, html:{'data-model' => 'employer'}, remote: true do |f| %>
+<%= form_for @employer, url: employers_path, html:{'data-model' => 'employer'}, remote: true, method: 'post' do |f| %>
 <div class="col-md-3 col-md-offset-2"> </div>
 <div class="btn-group" role="group" aria-label="...">
   <button id="add_new_employer" type="button" class="btn btn-default">　
@@ -45,16 +45,8 @@
   </tfoot>
 
   <tbody>
-  <% @employers.each do |employwer| %>
-  <tr>
-    <th><%= check_box_tag "delete[#{employwer.id}]", 1 %></th>
-    <td><a href="" > <%= employwer.first_name %></a></td>
-    <td><%= employwer.position %></td>
-    <td><%= employwer.office %></td>
-    <td><%= employwer.age %></td>
-    <td><%= employwer.start_date %></td>
-    <td><%= employwer.salary %></td>
-  </tr>
+  <% @employers.each do |employer| %>
+      <%= render partial: 'table_row', locals: {employer: employer} %>
   <% end %>
   </tbody>
 </table>

@@ -1,5 +1,6 @@
 Kouteimaster.delete_all
 Sagyou.delete_all
+Employer.delete_all
 
 Kouteimaster.create!([
   {id:1, 分類:"1", コード:1, 工程名:'販路開拓'},
@@ -41,3 +42,16 @@ Sagyou.create!([
   {id:21, 作業場所コード:1, 作業場所名:'帰宅'},
   {id:22, 作業場所コード:1, 作業場所名:'本社７Ｆ '}
   ])
+
+Employer.create!([
+                     {id:1, first_name:'Duc', position: 'IT Engeener', office: 'Osaka', age: 35, start_date: 2015/3/2},
+                     {id:2, first_name:'Tuan', position: 'IT Engeener', office: 'Osaka', age: 35, start_date: 2015/3/2},
+                     {id:3, first_name:'Quyen', position: 'IT Engeener', office: 'Osaka', age: 35, start_date: 2015/3/2},
+                     {id:4, first_name:'Giang', position: 'IT Engeener', office: 'Osaka', age: 35, start_date: 2015/3/2},
+                     {id:5, first_name:'Duong', position: 'IT Engeener', office: 'Osaka', age: 35, start_date: 2015/3/2},
+                     {id:6, first_name:'Minh', position: 'IT Engeener', office: 'Osaka', age: 35, start_date: 2015/3/2},
+                     {id:7, first_name:'Trang', position: 'IT Engeener', office: 'Osaka', age: 35, start_date: 2015/3/2},
+                     {id:8, first_name:'Nhung', position: 'IT Engeener', office: 'Osaka', age: 35, start_date: 2015/3/2},
+                     {id:9, first_name:'Hung', position: 'IT Engeener', office: 'Osaka', age: 35, start_date: 2015/3/2},
+                     {id:10, first_name:'Hai', position: 'IT Engeener', office: 'Osaka', age: 35, start_date: 2015/3/2},
+                 ])
