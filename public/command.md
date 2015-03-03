@@ -88,7 +88,7 @@ sudo service postgresql start
 sudo service postgresql stop
 ```
 
-・Gem pg install
+・Gem pg install (for MAC OSX)
 `gem install pg -- --with-pg-config=/Applications/Postgres.app/Contents/Versions/9.3/bin/pg_config`
 
 #５．Railsの設定
@@ -135,7 +135,7 @@ Create a new migration and run rake db:migrate
 
 `rails g migration change_table`
 
-View router path in current webapp
+View router path in current web app
 
 `rake routes`
 

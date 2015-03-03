@@ -102,7 +102,7 @@ $(function () {
 
 }(jQuery));
 
-//for buntton handel
+//for button handel
 
 $(function(){
     // Show new employer modal
