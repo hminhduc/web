@@ -1,9 +1,18 @@
 class EmployersController < ApplicationController
+  skip_before_action :verify_authenticity_token
+  before_action :set_employer, only: [:show, :edit, :update, :destroy]
 
   def index
     # get all record
     @employers = Employer.all
     @employer = Employer.new
+
+  end
+
+  def edit
+  end
+
+  def show
 
   end
 
@@ -37,6 +46,18 @@ class EmployersController < ApplicationController
       	end
     end
 
+  end
+
+  def update
+    respond_to do |format|
+      if @employer.update(employer_params)
+        format.html { redirect_to @employer, notice: '更新成功できました。' }
+        format.json { head :no_content }
+      else
+        format.html { render action: 'edit' }
+        format.json { render json: @employer.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def destroy

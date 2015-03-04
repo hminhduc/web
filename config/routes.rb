@@ -30,5 +30,6 @@ Jpt::Application.routes.draw do
 	# match 'multiselect', to: 'tree#multiselect', via: [:get,:post]
 	# match 'employer', to: 'tree#employer', via: [:get,:post]
 
-	resources :employers, only: [:index, :create, :destroy]
+	# resources :employers, only: [:index, :create, :edit, :destroy]
+  resources :employers
 end

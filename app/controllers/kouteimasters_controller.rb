@@ -46,7 +46,7 @@ class KouteimastersController < ApplicationController
   def update
     respond_to do |format|
       if @kouteimaster.update(kouteimaster_params)
-        format.html { redirect_to @kouteimaster, notice: '更新成功できました。' }
+        format.html { redirect_to kouteimasters_url, notice: '更新成功できました。' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

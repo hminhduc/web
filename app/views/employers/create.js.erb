@@ -1,5 +1,5 @@
 //hide modal
-    $('#new_employer_modal').modal('hide');
+//    $('#new_employer_modal').modal('hide');
 //add row
 //    $('#multiselect_table').append("<%# j render partial: 'table_row', locals: {employer: @employer } %>");
 
@@ -9,7 +9,7 @@
 //oTable.draw(true);
 oTable.row.add([
         '<input type="checkbox" name="delete[<%= @employer.id %>]" id="delete_<%= @employer.id %>" value="1">',
-        '<%= @employer.first_name %>',
+        '<a href="<%= edit_employer_path(@employer) %>" ><%= @employer.first_name %> </a>',
         '<%= @employer.position %>',
         '<%= @employer.office %>',
         '<%= @employer.age %>',
@@ -29,13 +29,5 @@ $('#delete_<%= @employer.id %>').click(function() {
 //    $(this).toggleClass('selected');
 //} );
 
-
-//clear modal field
-
-
-
-
-
-
-
 //clear modal error
+$('#new_employer_modal').modal_success();
