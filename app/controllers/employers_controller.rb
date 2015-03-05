@@ -43,7 +43,11 @@ class EmployersController < ApplicationController
       			format.json{}
       			format.js{render 'destroy'}
       		end
-      	end
+        else
+          respond_to do |format|
+            format.js {render 'empty'}
+          end
+        end
     end
 
   end

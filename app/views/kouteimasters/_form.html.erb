@@ -1,4 +1,6 @@
-<%= form_for @kouteimaster, html:{class: 'form-horizontal', role: :form, 'data-model' => 'kouteimaster'}, remote: true do |f| %>
+<% modal ||= false %>
+<% remote = modal ? true : false %>
+<%= form_for @kouteimaster, html:{class: 'form-horizontal', role: :form, 'data-model' => 'kouteimaster'}, remote: remote do |f| %>
   <% if @kouteimaster.errors.any? %>
     <div id="error_explanation">
       <h2><%= @kouteimaster.errors.count %> エラーが発生しました:</h2>

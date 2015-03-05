@@ -29,6 +29,12 @@ $(function(){
                 "width": '5px'
             }
         ]
+        ,"aoColumnDefs": [ {
+            "aTargets": [ 1 ],
+            "mRender": function ( data, type, full ) {
+                return '<a data-toggle="modal" href="#new_employer_modal">'+data+'</a>';
+            }
+        } ]
     });
 
     //選択された行を判断
@@ -46,6 +52,19 @@ $(function(){
     //    }
     //
     //} );
+
+
+    //set data of selected row to modal
+    $('#multiselect_table tbody').on( 'click', 'tr', function () {
+        var d = oTable.row(this).data();
+        $('#new_employer_modal').find('input[name="employer[first_name]"]').val(d[1]);
+        $('#new_employer_modal').find('input[name="employer[position]"]').val(d[2]);
+        $('#new_employer_modal').find('input[name="employer[office]"]').val(d[3]);
+        $('#new_employer_modal').find('input[name="employer[age]"]').val(d[4]);
+        $('#new_employer_modal').find('input[name="employer[start_date]"]').val(d[5]);
+        $('#new_employer_modal').find('input[name="employer[salary]"]').val(d[6]);
+
+    });
 
     $('#multiselect_table INPUT').click(function() {
         $(this).parent().parent().toggleClass('success');
@@ -74,7 +93,8 @@ $(function () {
 
         // clear form input elements
         // note: handle textarea, select, etc
-        this.find('form input[type="text"]').val('');
+        //this.find('form input[type="text"]').val('');
+        this.find('input[type="text"]').val('');
 
         // clear error state
         this.clear_previous_errors();
@@ -108,5 +128,11 @@ $(function(){
     // Show new employer modal
     $('#add_new_employer').click(function(){
         $('#new_employer_modal').modal('show');
+
+        $('#new_employer_modal').find('input[type="text"]').val('');
+
+        // clear error state
+        $('#new_employer_modal').clear_previous_errors();
     });
+
 });

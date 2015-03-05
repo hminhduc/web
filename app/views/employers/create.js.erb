@@ -9,7 +9,7 @@
 //oTable.draw(true);
 oTable.row.add([
         '<input type="checkbox" name="delete[<%= @employer.id %>]" id="delete_<%= @employer.id %>" value="1">',
-        '<a href="<%= edit_employer_path(@employer) %>" ><%= @employer.first_name %> </a>',
+        '<%= @employer.first_name %>',
         '<%= @employer.position %>',
         '<%= @employer.office %>',
         '<%= @employer.age %>',
