@@ -18,17 +18,19 @@ $(function(){
     //});
     oTable = $('#multiselect_table').DataTable({
         "pagingType": "full_numbers"
-        ,"scrollX": true
-        ,"scrollCollapse": true
+        ,"scrollX": false
+        ,"autoWidth": false
+        ,"scrollCollapse": false
         ,"oLanguage":{
             "sUrl": "../../assets/resource/dataTable_ja.txt"
         }
-        ,"columnDefs": [
-            {
-                "targets": [0],
-                "width": '5px'
-            }
-        ]
+        //,"columnDefs": [
+        //    {
+        //        "targets": [0],
+        //        //"width": '3px'
+        //        "width": "5%"
+        //    }
+        //]
         ,"aoColumnDefs": [ {
             "aTargets": [ 1 ],
             "mRender": function ( data, type, full ) {
