@@ -24,13 +24,13 @@ $(function(){
         ,"oLanguage":{
             "sUrl": "../../assets/resource/dataTable_ja.txt"
         }
-        //,"columnDefs": [
-        //    {
-        //        "targets": [0],
-        //        //"width": '3px'
-        //        "width": "5%"
-        //    }
-        //]
+        ,"columnDefs": [
+            {
+                "targets": [0],
+                //"width": '3px'
+                "width": "5%"
+            }
+        ]
         ,"aoColumnDefs": [ {
                 "aTargets": [ 1 ],
                 "mRender": function ( data, type, full ) {
