@@ -32,11 +32,14 @@ $(function(){
         //    }
         //]
         ,"aoColumnDefs": [ {
-            "aTargets": [ 1 ],
-            "mRender": function ( data, type, full ) {
-                return '<a data-toggle="modal" href="#new_employer_modal">'+data+'</a>';
-            }
-        } ]
+                "aTargets": [ 1 ],
+                "mRender": function ( data, type, full ) {
+                    return '<a data-toggle="modal" href="#new_employer_modal">'+data+'</a>';
+                }
+            },
+            { "bSortable": false, "aTargets": [ 0 ] },
+            { "sClass": "fixcenter", "aTargets": [ 1 ] }
+        ]
     });
 
     //選択された行を判断
@@ -71,6 +74,14 @@ $(function(){
     $('#multiselect_table INPUT').click(function() {
         $(this).parent().parent().toggleClass('success');
     });
+
+    //for get click to check all
+    $('#multiselect_table thead').on( 'click', 'th', function () {
+        var index = oTable.column( this ).index();
+        if (index == 0){
+            alert('chinh xax');
+        }
+    } );
 });
 
 //for handle ajax error
