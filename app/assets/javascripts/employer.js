@@ -37,8 +37,8 @@ $(function(){
                     return '<a data-toggle="modal" href="#new_employer_modal">'+data+'</a>';
                 }
             },
-            { "bSortable": false, "aTargets": [ 0 ] },
-            { "sClass": "fixcenter", "aTargets": [ 1 ] }
+            { "bSortable": false, "aTargets": [ 0 ] }
+            //,{ "sClass": "fixcenter", "aTargets": [ 1 ] }
         ]
     });
 
