@@ -29,6 +29,7 @@
     <th>Age</th>
     <th>Start date</th>
     <th>Salary</th>
+    <th></th>
   </tr>
   </thead>
 
@@ -41,6 +42,7 @@
     <th>Age</th>
     <th>Start date</th>
     <th>Salary</th>
+    <th></th>
   </tr>
   </tfoot>
 
@@ -107,9 +109,12 @@
           <span class="help-block"></span>
         </div>
 
+        <div>
+          <%= f.hidden_field :id %>
+        </div>
         <%# Added Bootstrap classes %>
         <div class="actions">
-          <%= f.submit '追加', class: 'btn btn-default', name: 'add' %>
+          <%= f.submit '更新', class: 'btn btn-default', name: 'add' %>
         </div>
       </div>
       <div class="modal-footer">
@@ -118,5 +123,5 @@
     </div>
   </div>
 </div>
-
+    <input type="hidden" id="clicked_index" name="clicked_index"/>
 <% end %>

@@ -39,6 +39,11 @@ $(function(){
             },
             { "bSortable": false, "aTargets": [ 0 ] }
             //,{ "sClass": "fixcenter", "aTargets": [ 1 ] }
+            ,{
+                "targets": [ 7 ],
+                "visible": false,
+                "searchable": false
+            }
         ]
     });
 
@@ -62,26 +67,29 @@ $(function(){
     //set data of selected row to modal
     $('#multiselect_table tbody').on( 'click', 'tr', function () {
         var d = oTable.row(this).data();
-        $('#new_employer_modal').find('input[name="employer[first_name]"]').val(d[1]);
-        $('#new_employer_modal').find('input[name="employer[position]"]').val(d[2]);
-        $('#new_employer_modal').find('input[name="employer[office]"]').val(d[3]);
-        $('#new_employer_modal').find('input[name="employer[age]"]').val(d[4]);
-        $('#new_employer_modal').find('input[name="employer[start_date]"]').val(d[5]);
-        $('#new_employer_modal').find('input[name="employer[salary]"]').val(d[6]);
-
+        var modal = $('#new_employer_modal');
+        modal.find('input[name="employer[first_name]"]').val(d[1]);
+        modal.find('input[name="employer[position]"]').val(d[2]);
+        modal.find('input[name="employer[office]"]').val(d[3]);
+        modal.find('input[name="employer[age]"]').val(d[4]);
+        modal.find('input[name="employer[start_date]"]').val(d[5]);
+        modal.find('input[name="employer[salary]"]').val(d[6]);
+        modal.find('input[name="employer[id]"]').val(d[7]);
+        idx = oTable.row(this).index();
+        $('#clicked_index').val(idx);
     });
 
-    $('#multiselect_table INPUT').click(function() {
+    $('#multiselect_table tbody INPUT').click(function() {
         $(this).parent().parent().toggleClass('success');
     });
 
     //for get click to check all
-    $('#multiselect_table thead').on( 'click', 'th', function () {
-        var index = oTable.column( this ).index();
-        if (index == 0){
-            alert('chinh xax');
-        }
-    } );
+    //$('#multiselect_table thead').on( 'click', 'th', function () {
+    //    var index = oTable.column( this ).index();
+    //    if (index == 0){
+    //        alert('chinh xax');
+    //    }
+    //} );
 });
 
 //for handle ajax error
@@ -146,6 +154,18 @@ $(function(){
 
         // clear error state
         $('#new_employer_modal').clear_previous_errors();
+    });
+
+    //For hander check_all
+    $('#delete_all').click(function(){
+        if ($(this).is(":checked")) {
+            $('#multiselect_table tbody tr').addClass('success');
+            $('#multiselect_table tbody').find('input[type="checkbox"]').prop('checked', true);
+        }else{
+            $('#multiselect_table tbody tr').removeClass('success');
+            $('#multiselect_table tbody').find('input[type="checkbox"]').prop('checked', false);
+
+        }
     });
 
 });

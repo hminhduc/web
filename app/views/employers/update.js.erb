@@ -1,0 +1,14 @@
+idx = $('#clicked_index').val();
+var d = oTable.row( idx ).data();
+
+d[1] = '<%= @employer.first_name %>';
+d[2] = '<%= @employer.position %>';
+d[3] = '<%= @employer.office %>';
+d[4] = '<%= @employer.age %>';
+d[5] = '<%= @employer.start_date %>';
+d[6] = '<%= @employer.salary %>';
+
+oTable.row( idx ).data( d );
+oTable.draw();
+//clear modal error
+$('#new_employer_modal').modal_success();

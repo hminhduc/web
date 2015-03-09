@@ -18,23 +18,38 @@ class EmployersController < ApplicationController
 
   def create
     if params[:add]
-      @employer = Employer.new(employer_params)
-
-      respond_to do |format|
-        if @employer.save
-          format.html { redirect_to @employer, notice: '新規成功出来ました。' }
-          format.json { render action: 'show', status: :created, location: @employer }
-          # format.js { render 'index', status: :created, location: @employer }
-          format.js {}
-        else
-          format.html { render action: 'new' }
-          format.json { render json: @employer.errors, status: :unprocessable_entity }
-          format.js { render json: @employer.errors, status: :unprocessable_entity }
-          # format.js { render 'show' }
+      if  params[:employer][:id]
+        # Update
+        id = params[:employer][:id]
+        @employer = Employer.find(id)
+        respond_to do |format|
+          if @employer.update(employer_params)
+            format.js {render 'update'}
+          else
+            format.js {render 'empty'}
+          end
         end
+
+      else
+        # New
+        @employer = Employer.new(employer_params)
+
+        respond_to do |format|
+            if @employer.save
+              format.html { redirect_to @employer, notice: '新規成功出来ました。' }
+              format.json { render action: 'show', status: :created, location: @employer }
+              # format.js { render 'index', status: :created, location: @employer }
+              format.js {}
+            else
+              format.html { render action: 'new' }
+              format.json { render json: @employer.errors, status: :unprocessable_entity }
+              format.js { render json: @employer.errors, status: :unprocessable_entity }
+              # format.js { render 'show' }
+            end
+          end
       end
-    else
-      	if !params[:delete].nil?
+    # delete
+    else if !params[:delete].nil?
       		params[:delete].each do |id,value|
       			Employer.find(id.to_i).destroy
       		end
@@ -76,7 +91,7 @@ class EmployersController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def employer_params
-    params.require(:employer).permit(:first_name, :position, :office, :age, :start_date, :salary)
+    params.require(:employer).permit(:first_name, :position, :office, :age, :start_date, :salary, :id)
   end
 
 end
