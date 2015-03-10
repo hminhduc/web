@@ -132,15 +132,15 @@ rollback
 `rake db:migrate:down VERSION=20100905201547`
 
 Create a new migration and run rake db:migrate
-
 `rails g migration change_table`
 
-View router path in current web app
+To overrite existing file user --force option
+`rails g migration employer --force`
 
+View router path in current web app
 `rake routes`
 
 Create a seeds.rb on db folder and write insert code to auto insert data to table
-
 `rake db:seed`
 
 #8.rails

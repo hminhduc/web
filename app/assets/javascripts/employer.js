@@ -75,6 +75,7 @@ $(function(){
         modal.find('input[name="employer[start_date]"]').val(d[5]);
         modal.find('input[name="employer[salary]"]').val(d[6]);
         modal.find('input[name="employer[id]"]').val(d[7]);
+
         idx = oTable.row(this).index();
         $('#clicked_index').val(idx);
     });
@@ -151,9 +152,13 @@ $(function(){
         $('#new_employer_modal').modal('show');
 
         $('#new_employer_modal').find('input[type="text"]').val('');
+        $('#new_employer_modal').find('input[type="hidden"]').val('');
 
         // clear error state
         $('#new_employer_modal').clear_previous_errors();
+
+        //Clear clicked index
+        $('#clicked_index').val('');
     });
 
     //For hander check_all

@@ -18,7 +18,7 @@ class EmployersController < ApplicationController
 
   def create
     if params[:add]
-      if  params[:employer][:id]
+      if  !params[:clicked_index].empty?
         # Update
         id = params[:employer][:id]
         @employer = Employer.find(id)
@@ -26,7 +26,8 @@ class EmployersController < ApplicationController
           if @employer.update(employer_params)
             format.js {render 'update'}
           else
-            format.js {render 'empty'}
+            # format.js {render 'empty'}
+            format.js { render json: @employer.errors, status: :unprocessable_entity }
           end
         end
 

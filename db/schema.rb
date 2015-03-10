@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150226064749) do
+ActiveRecord::Schema.define(version: 20150310063707) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "customers", force: :cascade do |t|
-    t.string   "name",       limit: 255
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20150226064749) do
     t.string   "position"
     t.string   "office"
     t.integer  "age"
-    t.datetime "start_date"
+    t.date     "start_date"
     t.decimal  "salary"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -40,35 +40,47 @@ ActiveRecord::Schema.define(version: 20150226064749) do
     t.datetime "updated_at"
   end
 
+  create_table "people", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "password"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "position",   limit: 50
+    t.string   "office",     limit: 50
+    t.integer  "age"
+    t.integer  "start_date"
+    t.decimal  "salary"
+  end
+
   create_table "作業場所マスタ", force: :cascade do |t|
-    t.string   "作業場所コード",    limit: 255
-    t.string   "作業場所名",      limit: 255
+    t.string   "作業場所コード"
+    t.string   "作業場所名"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "工程マスタ", force: :cascade do |t|
-    t.string   "分類",         limit: 255
-    t.string   "コード",        limit: 255
-    t.string   "工程名",        limit: 255
+    t.string   "分類"
+    t.string   "コード"
+    t.string   "工程名"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "所在マスタ", force: :cascade do |t|
-    t.string   "所在コード",      limit: 255
-    t.string   "所在名",        limit: 255
+    t.string   "所在コード"
+    t.string   "所在名"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "担当者マスタ", force: :cascade do |t|
-    t.string   "担当者コード",     limit: 255
-    t.string   "担当者名称",      limit: 255
-    t.string   "パスワード",      limit: 255
+    t.string   "担当者コード"
+    t.string   "担当者名称"
+    t.string   "パスワード"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "email",      limit: 50
   end
 
 end
