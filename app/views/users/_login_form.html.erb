@@ -1,37 +1,40 @@
+<div class="col-md-3 col-md-offset-4">
+  <div class="well">
+
 
 <%= form_for :user, url: login_path, html:{class: 'form-horizontal'}  do |f| %>
   <div class="form-group">
     <div class="field">
-      <%= f.label :社員番号, class: 'col-sm-2 control-label' %>
-      <div class="col-sm-2">
-        <%= f.text_field :担当者コード, class: 'form-control' %>
+      <div class="col-md-12">
+        <%= f.text_field :担当者コード, class: 'form-control', placeholder: '担当者コード' %>
       </div>
     </div>
   </div>
 
   <div class="form-group">
     <div class="field">
-      <%= f.label :パスワード, class: 'col-sm-2 control-label' %>
-      <div class="col-sm-2">
-        <%= f.password_field :パスワード, class: 'form-control' %>
+      <div class="col-md-12">
+        <%= f.password_field :パスワード, class: 'form-control', placeholder: 'パスワード' %>
       </div>
     </div>
   </div>
 
   <div class="form-group">
     <div class="col-sm-5 col-sm-offset-2">  
-      <span id="notice"> <font color="red"> <%= flash[:notice] %> </font> </span>
+      <span id="notice"><%= flash[:notice] %></span>
     </div>
   </div>
   
   <div class="form-group">
-    <div class="field">
-      <div class="col-sm-1 col-sm-offset-2">
-        <div class="actions">
-          <%= f.submit 'LOGIN', class: 'btn btn-primary' %>
-        </div>
-      </div>
+    <div class="col-md-12">
+      <%= f.submit 'Sign in', class: 'btn btn-primary' %>
     </div>
   </div>
 
 <% end %>
+    <div class="col-md-7 col-md-offset-6">
+        <%= link_to 'Create account' %>
+    </div>
+
+  </div>
+</div>
