@@ -12,11 +12,12 @@ Jpt::Application.routes.draw do
 	end
 
 	root to: 'users#login'
-	post 'users/login'
 
-	match 'login', to: 'users#create', via: [:post]
-	match 'change_pass', to: 'users#change_pass', via: [:get,:post]
-	match 'change_pass_exc', to: 'users#change_pass_exc', via: [:get,:post]
+	# post 'users/login'
+
+	# match 'login', to: 'users#create', via: [:post]
+	# match 'change_pass', to: 'users#change_pass', via: [:get,:post]
+	# match 'change_pass_exc', to: 'users#change_pass_exc', via: [:get,:post]
 
 	match 'main', to: 'main#index', via: [:get]
 
@@ -30,6 +31,11 @@ Jpt::Application.routes.draw do
 	# match 'multiselect', to: 'tree#multiselect', via: [:get,:post]
 	# match 'employer', to: 'tree#employer', via: [:get,:post]
 
-	# resources :employers, only: [:index, :create, :edit, :destroy]
+	# resources :employers, only: [:index, :create, :new, :edit, :show, :update, :destroy]
+  resources :users, only: [:create, :new] do
+    collection do
+      get :login
+    end
+  end
   resources :employers
 end

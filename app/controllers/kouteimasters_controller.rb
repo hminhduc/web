@@ -28,7 +28,7 @@ class KouteimastersController < ApplicationController
     @kouteimaster = Kouteimaster.new(kouteimaster_params)
 
     respond_to do |format|
-      if @kouteimaster.save
+       if @kouteimaster.save
         format.html { redirect_to @kouteimaster, notice: '新規成功出来ました。' }
         format.json { render action: 'show', status: :created, location: @kouteimaster }
         format.js { render action: 'show', status: :created, location: @kouteimaster }

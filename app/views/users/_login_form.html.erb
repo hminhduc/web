@@ -2,11 +2,11 @@
   <div class="well">
 
 
-<%= form_for :user, url: login_path, html:{class: 'form-horizontal'}  do |f| %>
+<%= form_for :user, url: users_path, html:{class: 'form-horizontal'}  do |f| %>
   <div class="form-group">
     <div class="field">
       <div class="col-md-12">
-        <%= f.text_field :担当者コード, class: 'form-control', placeholder: '担当者コード' %>
+        <%= f.text_field :担当者コード, class: 'form-control', placeholder: 'user name' %>
       </div>
     </div>
   </div>
@@ -14,16 +14,16 @@
   <div class="form-group">
     <div class="field">
       <div class="col-md-12">
-        <%= f.password_field :パスワード, class: 'form-control', placeholder: 'パスワード' %>
+        <%= f.password_field :パスワード, class: 'form-control', placeholder: 'password' %>
       </div>
     </div>
   </div>
 
-  <div class="form-group">
-    <div class="col-sm-5 col-sm-offset-2">  
-      <span id="notice"><%= flash[:notice] %></span>
-    </div>
-  </div>
+  <!--<div class="form-group">-->
+    <!--<div class="col-md-5 col-md-offset-2">-->
+      <!--<span id="notice"><%# flash[:notice] %></span>-->
+    <!--</div>-->
+  <!--</div>-->
   
   <div class="form-group">
     <div class="col-md-12">
@@ -33,7 +33,7 @@
 
 <% end %>
     <div class="col-md-7 col-md-offset-6">
-        <%= link_to 'Create account' %>
+        <%= link_to 'Create account', new_user_path %>
     </div>
 
   </div>

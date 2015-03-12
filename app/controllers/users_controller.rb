@@ -4,11 +4,9 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
   end
 
   def login
-    @user = User.new
   end
 
   # GET /users/1
@@ -28,20 +26,37 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    @user = User.where('担当者コード = ? AND パスワード = ?',params[:user][:担当者コード].downcase,params[:user][:パスワード]).first
+    case params[:commit]
+      when 'Create'
+        @user = User.new(user_params)
+        respond_to do |format|
+          if @user.save
+            Rails.logger.info 'User created'
+            format.html { redirect_to login_users_url, notice: '新規成功出来ました。' }
+          else
+            Rails.logger.info 'User uncreated'
+            format.html { render 'new' }
+            # format.json { render json: @user.errors, status: :unprocessable_entity }
+            # format.js { render json: @user.errors, status: :unprocessable_entity }
+            # format.js { render 'show' }
+          end
+        end
+      when 'Sign in'
+        @user = User.where('担当者コード = ? AND パスワード = ?',params[:user][:担当者コード].downcase,params[:user][:パスワード]).first
 
-    respond_to do |format|
-      if @user.nil?
-        Rails.logger.info 'login unsuccess'
-        flash.now[:notice] = "社員番号とパスワードを正しく入力してください。"
-        # Create an error message and re-render the signin form.
-        format.html {render action: 'login', notice: 'unsuccess'}
-      else
-        # Sign the user in and redirect to the user's show page.
-        Rails.logger.info 'login success'
-        # format.html { redirect_to main_shozais_url }
-        format.html { redirect_to main_url }
-      end
+        respond_to do |format|
+          if @user.nil?
+            Rails.logger.info 'login unsuccess'
+            flash.now[:notice] = "社員番号とパスワードを正しく入力してください。"
+            # Create an error message and re-render the signin form.
+            format.html {render action: 'login', notice: 'unsuccess'}
+          else
+            # Sign the user in and redirect to the user's show page.
+            Rails.logger.info 'login success'
+            # format.html { redirect_to main_shozais_url }
+            format.html { redirect_to main_url }
+          end
+        end
     end
     # @user = User.new(user_params)
 
