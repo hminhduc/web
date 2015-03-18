@@ -12,7 +12,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'thin'
 gem 'bootstrap-sass'
-
+gem 'fullcalendar-rails'
 gem 'pg'
 #gem 'debugger'
 

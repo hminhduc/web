@@ -18,6 +18,7 @@
  *= require style.min.css
 
  *= require bootstrap-datetimepicker.css
+ *= require fullcalendar
 
  * require_tree .
 */

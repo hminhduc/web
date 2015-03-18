@@ -38,4 +38,6 @@ Jpt::Application.routes.draw do
     end
   end
   resources :employers
+  resources :atops, only: [:index]
+
 end

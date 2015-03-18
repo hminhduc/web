@@ -33,5 +33,6 @@
 
 //= require bootstrap-maxlength.js
 //= require kouteimasters.js.coffee
+//= require fullcalendar
 
 // require_tree .
