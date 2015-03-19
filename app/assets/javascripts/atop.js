@@ -20,7 +20,8 @@ $(function(){
 
     $('#goto-date-button').click(function() {
         //$('#calendar').fullCalendar('next');
-        date = moment('1979-05-28');
+        date_input = $('#goto-date-input').val();
+        date = moment(date_input);
         $('#calendar').fullCalendar('gotoDate',date);
 
     });
