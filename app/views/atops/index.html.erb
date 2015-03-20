@@ -1,11 +1,18 @@
 <%= javascript_include_tag 'atop' %>
 <%= javascript_include_tag 'resource/ja' %>
 
+<ol class="breadcrumb">
+  <li><%= link_to 'メニュー', main_path %></li>
+  <!-- <li><a href="#">基準情報</a></li> -->
+  <!-- <li><a href="#">セキュリティ管理</a></li> -->
+  <li class="active">カレンダー</li>
+</ol>
+
 <div class="form-group">
   <div class="col-md-2">
       <input type='text' class="form-control" id="goto-date-input" name="goto-date-input" placeholder="2013/03/18" >
   </div>
-  <button id="goto-date-button">Goto</button>
+  <button id="goto-date-button">検索</button>
 </div>
 
 <div class="form-group">

@@ -11,10 +11,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150318023747) do
+ActiveRecord::Schema.define(version: 20150320025733) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "JPT場所マスタ", force: :cascade do |t|
+    t.string   "社員番号"
+    t.string   "場所コード"
+    t.string   "場所名"
+    t.string   "場所名カナ"
+    t.string   "SUB"
+    t.string   "場所区分"
+    t.string   "会社コード"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "JPT工程マスタ", force: :cascade do |t|
+    t.string   "所属コード"
+    t.string   "工程コード"
+    t.string   "工程名"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "JPT状態マスタ", force: :cascade do |t|
+    t.string   "状態コード"
+    t.string   "状態名"
+    t.string   "状態区分"
+    t.string   "マーク"
+    t.string   "色"
+    t.string   "WEB使用区分"
+    t.string   "勤怠使用区分"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "customers", force: :cascade do |t|
     t.string   "name"

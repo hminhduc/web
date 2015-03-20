@@ -124,6 +124,8 @@ DBVisual install
 #7.rake
 ```
 rails generate controller Shozai index
+rails generate model Article title:string text:text
+(will create a migrate file acording with that field in database)
 rails g scaffold Person first_name:string last_name:string
 rake db:migrate
 ```

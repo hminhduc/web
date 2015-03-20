@@ -54,6 +54,7 @@ class UsersController < ApplicationController
             # Sign the user in and redirect to the user's show page.
             Rails.logger.info 'login success'
             # format.html { redirect_to main_shozais_url }
+            session['user'] = @user.担当者名称
             format.html { redirect_to atops_url }
           end
         end
