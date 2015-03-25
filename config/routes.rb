@@ -1,5 +1,9 @@
 Jpt::Application.routes.draw do
 
+  get 'joutaimasters/index'
+
+  get 'bashomaster/index'
+
   resources :kouteimasters
 
   # get "shozais/index"

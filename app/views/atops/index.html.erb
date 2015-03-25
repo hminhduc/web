@@ -9,10 +9,78 @@
 </ol>
 
 <div class="form-group">
+  <div class="col-md-12">
+
+    <table id="event_table" class="table table-striped table-bordered table-hover" cellspacing="0" width="100%">
+      <thead>
+      <tr>
+        <th>日付</th>
+        <th>開始時刻</th>
+        <th>終了時刻</th>
+        <th>状態</th>
+        <th>場所／用件</th>
+        <th>SUB</th>
+        <th>JOB No.</th>
+        <th>工程名</th>
+        <th>工数</th>
+        <th>計上</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr>
+        <td>1日15日</td>
+        <td>10：30</td>
+        <td>12：00</td>
+        <td>本社</td>
+        <td>７F</td>
+        <td>会議</td>
+        <td>12345</td>
+        <td>会社業務改造</td>
+        <td>1.5</td>
+        <td>済</td>
+      </tr>
+      <tr>
+        <td>1日15日</td>
+        <td>10：30</td>
+        <td>12：00</td>
+        <td>本社</td>
+        <td>７F</td>
+        <td>会議</td>
+        <td>12345</td>
+        <td>会社業務改造</td>
+        <td>1.5</td>
+        <td>済</td>
+      </tr>
+      <tr>
+        <td>1日15日</td>
+        <td>10：30</td>
+        <td>12：00</td>
+        <td>本社</td>
+        <td>７F</td>
+        <td>会議</td>
+        <td>12345</td>
+        <td>会社業務改造</td>
+        <td>1.5</td>
+        <td>済</td>
+      </tr>
+
+
+
+      <%# @events.each do |event| %>
+      <%# render partial: 'table_row', locals: {event: event} %>
+      <%# end %>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<div class="form-group">
   <div class="col-md-2">
       <input type='text' class="form-control" id="goto-date-input" name="goto-date-input" placeholder="2013/03/18" >
   </div>
-  <button id="goto-date-button">検索</button>
+  <button id="goto-date-button" class="btn btn-default" type="button">検索</button>
 </div>
 
 <div class="form-group">

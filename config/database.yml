@@ -16,13 +16,13 @@ development:
 
   adapter: postgresql
   encoding: unicode
-  database: jpt
+  database: duc
   host: localhost
 #  host: 192.168.35.178
   pool: 5
   # timeout: 5000
-  username: jpt
-  password: jpt
+  username: duc
+  password: duc
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

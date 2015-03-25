@@ -14,6 +14,7 @@ gem 'thin'
 gem 'bootstrap-sass'
 gem 'fullcalendar-rails'
 gem 'pg'
+gem 'activerecord-reset-pk-sequence'
 #gem 'debugger'
 
 #gem 'ruby-oci8'
