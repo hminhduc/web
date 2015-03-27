@@ -12,9 +12,9 @@
 
   <thead>
     <tr>
+      <th>所属コード</th>
       <th>工程コード</th>
       <th>工程名</th>
-      <th>分類</th>
       <th></th>
       <th></th>
       <th></th>
@@ -24,9 +24,9 @@
   <tbody>
     <% @kouteimasters.each do |kouteimaster| %>
       <tr id="koutei_<%= kouteimaster.id %>">
-        <td><%= kouteimaster.コード %></td>
+        <td><%= kouteimaster.所属コード %></td>
+        <td><%= kouteimaster.工程コード %></td>
         <td><%= kouteimaster.工程名 %></td>
-        <td><%= kouteimaster.分類 %></td>
         <td><%= link_to '詳細', kouteimaster %></td>
         <td><%= link_to '編集', edit_kouteimaster_path(kouteimaster) %></td>
         <td><%= link_to '削除', kouteimaster, remote: true, method: :delete, data: { confirm: '削除で宜しですか。' } %></td>

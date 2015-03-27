@@ -11,16 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150325090151) do
+ActiveRecord::Schema.define(version: 20150327083502) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "customers", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "employer", force: :cascade do |t|
     t.string   "first_name"
@@ -34,19 +28,18 @@ ActiveRecord::Schema.define(version: 20150325090151) do
   end
 
   create_table "events", force: :cascade do |t|
-    t.string   "title"
-    t.text     "description"
-    t.datetime "start_time"
-    t.datetime "end_time"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "orders", force: :cascade do |t|
-    t.integer  "customer_id"
-    t.datetime "order_date"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string   "社員番号"
+    t.date     "日付"
+    t.string   "開始時刻"
+    t.string   "終了時刻"
+    t.string   "状態コード"
+    t.string   "場所コード"
+    t.string   "JOB"
+    t.string   "工程コード"
+    t.string   "工数"
+    t.string   "計上"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "作業場所マスタ", force: :cascade do |t|

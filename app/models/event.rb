@@ -1,4 +1,4 @@
 class Event < ActiveRecord::Base
-  self.table_name = 'event'
+  self.table_name = 'events'
 
 end

@@ -55,7 +55,7 @@ class UsersController < ApplicationController
             Rails.logger.info 'login success'
             # format.html { redirect_to main_shozais_url }
             session['user'] = @user.担当者名称
-            format.html { redirect_to atops_url }
+            format.html { redirect_to events_url }
           end
         end
     end

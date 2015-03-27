@@ -1,9 +1,13 @@
 Jpt::Application.routes.draw do
 
+  # get 'events/index'
+
   get 'joutaimasters/index'
 
   get 'bashomaster/index'
 
+  resources :events, only: [:index] 
+	
   resources :kouteimasters
 
   # get "shozais/index"
@@ -42,6 +46,6 @@ Jpt::Application.routes.draw do
     end
   end
   resources :employers
-  resources :atops, only: [:index]
+  # resources :atops, only: [:index]
 
 end
