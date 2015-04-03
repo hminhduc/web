@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   end
 
   def login
+    session['user'] = ''
   end
 
   # GET /users/1

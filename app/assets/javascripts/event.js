@@ -5,7 +5,7 @@
 $(function(){
     $('#calendar').fullCalendar(
         {
-            events: '/atops.json',
+            events: '/events.json',
             header: {
                 left:   'title',
                 center: 'month,basicWeek,basicDay prevYear,nextYear',

@@ -1,7 +1,7 @@
-#１．Dropboxのインストール
+##Dropboxのインストール
 Ubuntu Software CenterからDropboxを検索し、一覧の結果からインストールします。
 
-#２．Rubyのインストール
+##Rubyのインストール
 ・環境の準備、最新ものを確認します。下記の２つコマンドでTerminalにコピーして実行しましょう。
 
 
@@ -24,7 +24,7 @@ ruby -v
 ・Rubygemsのインストールの際、スピードを撮れる為Gemのドキュメントが要らないのでriを除外します：
 `echo "gem: --no-ri --no-rdoc" > ~/.gemrc`
 
-# ３．Railsのインストール  
+##Railsのインストール  
 ・Railsのインストール前にNodeJSをインストールします：
 
 ```
@@ -40,7 +40,7 @@ sudo apt-get install nodejs
 `rails -v`  
 <!-- # Rails 4.1.1 -->
 
-#４．Postgresqlをインストール
+##Postgresqlをインストール
 `$ sudo apt-getinstall postgresql postgresql-client libpq-dev`
 
 ・Pgのインストールが完了しましたら、PgへLoginしてみます：  
@@ -94,7 +94,7 @@ sudo service postgresql stop
 ・Gem pg install (for MAC OSX)  
 `gem install pg -- --with-pg-config=/Applications/Postgres.app/Contents/Versions/9.3/bin/pg_config`
 
-#５．Railsの設定
+##Railsの設定
 ・# Gemfileに下記の行を追加されます
 gem "pg"
 ・ウエブフォルダはロカールにコピーします。例えば：/home/cmc/jpt
@@ -105,7 +105,7 @@ $ bundle install
 ・Startサーバ
 rails s
 
-#6.Database Tool Install
+##Database Tool Install
 Navicatのインストール
 ホームページで開いてLinuxの所にダウンロードリンクがあります：
 www.navicat.com/download/navicat-premium
@@ -124,7 +124,7 @@ start_navicatをTerninalにドラグ・ドロプしてインストールしま�
 DBVisual install
 
 
-#7.rake
+##rake
 
 `rails generate controller Shozai index`  
 (for revert generate command)  
@@ -154,8 +154,8 @@ View router path in current web app
 Create a seeds.rb on db folder and write insert code to auto insert data to table  
 `rake db:seed`
 
-#8.rails
+##rails
 `rails server -e production`
 
-#9.To create a new Rails application to use PostgreSQL:
+##To create a new Rails application to use PostgreSQL:
 `$ rails new myapp --database=postgresql`

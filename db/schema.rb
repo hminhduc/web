@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150327083502) do
+ActiveRecord::Schema.define(version: 20150402092042) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,12 +29,12 @@ ActiveRecord::Schema.define(version: 20150327083502) do
 
   create_table "events", force: :cascade do |t|
     t.string   "社員番号"
-    t.date     "日付"
-    t.string   "開始時刻"
-    t.string   "終了時刻"
+    t.datetime "開始"
+    t.datetime "終了"
     t.string   "状態コード"
     t.string   "場所コード"
     t.string   "JOB"
+    t.string   "所属コード"
     t.string   "工程コード"
     t.string   "工数"
     t.string   "計上"

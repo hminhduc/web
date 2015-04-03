@@ -6,7 +6,7 @@ Jpt::Application.routes.draw do
 
   get 'bashomaster/index'
 
-  resources :events, only: [:index] 
+  resources :events, only: [:index, :new, :create] 
 	
   resources :kouteimasters
 
@@ -46,6 +46,5 @@ Jpt::Application.routes.draw do
     end
   end
   resources :employers
-  # resources :atops, only: [:index]
 
 end
