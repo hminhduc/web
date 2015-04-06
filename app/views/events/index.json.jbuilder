@@ -4,5 +4,5 @@ json.array!(@events) do |event|
   json.description event.場所名
   json.start event.開始
   json.end event.終了
-  json.url events_url(event, format: :html)
+  json.url edit_event_url(event, format: :html)
 end

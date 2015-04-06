@@ -1,0 +1,106 @@
+<ol class="breadcrumb">
+  <li><%= link_to 'メニュー', main_path %></li>
+  <li><%= link_to 'カレンダー', events_path %></li>
+  <li class="active">イベント</li>
+</ol>
+
+<%# render 'form_event' %>
+
+<%= form_for @event, html:{class: 'form-horizontal', role: :form, 'data-model' => 'event'} do |f| %>
+    <% if @event.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= @event.errors.count %> エラーが発生しました:</h2>
+          <ul>
+            <% @event.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.label :社員番号, class: 'col-sm-2 control-label' %>
+      <div class="col-sm-2">
+        <%= f.text_field :社員番号, class: 'form-control' %>
+      </div>
+      <span id="shainbango" class="help-block"></span>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :開始, class: 'col-sm-2 control-label' %>
+      <div class="col-sm-2">
+        <%= f.text_field :開始, class: 'form-control' %>
+      </div>
+      <span id="start_date" class="help-block"></span>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :終了, class: 'col-sm-2 control-label' %>
+      <div class="col-sm-2">
+        <%= f.text_field :終了, class: 'form-control' %>
+      </div>
+      <span id="end_date" class="help-block"></span>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :状態コード, class: 'col-sm-2 control-label' %>
+      <div class="col-sm-2">
+        <%= f.text_field :状態コード, class: 'form-control' %>
+      </div>
+      <span class="help-block"></span>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :場所コード, class: 'col-sm-2 control-label' %>
+      <div class="col-sm-2">
+        <%= f.text_field :場所コード, class: 'form-control' %>
+      </div>
+      <span class="help-block"></span>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :JOB, class: 'col-sm-2 control-label' %>
+      <div class="col-sm-2">
+        <%= f.text_field :JOB, class: 'form-control' %>
+      </div>
+      <span class="help-block"></span>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :所属コード, class: 'col-sm-2 control-label' %>
+      <div class="col-sm-2">
+        <%= f.text_field :所属コード, class: 'form-control' %>
+      </div>
+      <span class="help-block"></span>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :工程コード, class: 'col-sm-2 control-label' %>
+      <div class="col-sm-2">
+        <%= f.text_field :工程コード, class: 'form-control' %>
+      </div>
+      <span class="help-block"></span>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :工数, class: 'col-sm-2 control-label' %>
+      <div class="col-sm-2">
+        <%= f.text_field :工数, class: 'form-control' %>
+      </div>
+      <span class="help-block"></span>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :計上, class: 'col-sm-2 control-label' %>
+      <div class="col-sm-2">
+        <%= f.text_field :計上, class: 'form-control' %>
+      </div>
+      <span class="help-block"></span>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-2 col-sm-offset-2">
+        <%= f.submit '　登録　', class: 'btn btn-primary' %>
+      </div>
+    </div>
+<% end %>

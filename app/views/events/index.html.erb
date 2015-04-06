@@ -1,0 +1,105 @@
+<%= javascript_include_tag 'event' %>
+<%= javascript_include_tag 'resource/ja' %>
+
+<div class="row">
+  <div class="col-md-12">
+    <ol class="breadcrumb">
+      <li><%= link_to 'メニュー', main_path %></li>
+      <!-- <li><a href="#">基準情報</a></li> -->
+      <!-- <li><a href="#">セキュリティ管理</a></li> -->
+      <li class="active">カレンダー</li>
+    </ol>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-2 col-md-offset-6">
+    <h3><span class="label label-default">氏名：　松本　建二</span></h3>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-2">
+    <input type='text' class="form-control" id="goto-date-input" name="goto-date-input" placeholder="YYYY-MM-DD" >
+  </div>
+  <div class="col-md-1">
+    <button id="goto-date-button" class="btn btn-default" type="button">検索</button>
+  </div>
+
+  <div class="col-md-2 col-md-offset-3">
+    <h4>役員G：　間接部門</h4>
+  </div>
+
+  <div class="col-md-1 col-md-offset-1">
+    <button class="btn btn-default">社員選択</button>
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="spacer">
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+
+    <table id="event_table" class="table table-striped table-bordered table-hover" cellspacing="0" width="100%">
+      <thead>
+      <tr>
+        <th>開始時刻</th>
+        <th>終了時刻</th>
+        <th>状態</th>
+        <th>場所／用件</th>
+        <th>JOB No.</th>
+        <th>工程名</th>
+        <th>工数</th>
+        <th>計上</th>
+      </tr>
+      </thead>
+
+      <tbody>
+<% @events.each do |event| %>
+      <tr>
+        <td><%= event.開始 %></td>
+        <td><%= event.終了 %></td>
+        <td><%= event.状態名 %></td>
+        <td><%= event.場所名 %></td>
+        <td><%= event.JOB %></td>
+        <td><%= event.工程名 %></td>
+        <td><%= event.工数 %></td>
+        <td><%= event.計上 %></td>
+      </tr>
+<% end %>
+
+
+      <%# @events.each do |event| %>
+      <%# render partial: 'table_row', locals: {event: event} %>
+      <%# end %>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+  <div class="row">
+    <div class="col-md-2">
+      <%= link_to "新規イベント", new_event_path %>
+    </div>
+  </div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="spacer">
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div id="calendar"></div>
+  </div>
+</div>
+
