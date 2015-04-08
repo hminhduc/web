@@ -11,7 +11,6 @@
     </ol>
   </div>
 </div>
-
 <div class="row">
   <div class="col-md-2 col-md-offset-6">
     <h3><span class="label label-default">氏名：　松本　建二</span></h3>
@@ -31,7 +30,8 @@
   </div>
 
   <div class="col-md-1 col-md-offset-1">
-    <button class="btn btn-default">社員選択</button>
+    <%# button_to '社員選択', %>
+    <button class="btn btn-default" id="search_user">社員選択</button>
   </div>
 
 </div>
@@ -96,10 +96,11 @@
     </div>
   </div>
 </div>
-
+<legend></legend>
 <div class="row">
   <div class="col-md-12">
     <div id="calendar"></div>
   </div>
 </div>
 
+<%= render 'select_user_modal' %>
