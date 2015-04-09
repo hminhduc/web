@@ -3,7 +3,7 @@ class EventsController < ApplicationController
 
   def index
     # @events = Event.all
-    @events = Event.binding_event
+    @events = Event.binding_event_by_change_user(session['selected_user'])
     @user = User.all
   end
   
@@ -43,7 +43,19 @@ class EventsController < ApplicationController
     end
 
   end
-
+  
+  def change_user
+    # @events = Event.binding_event_by_change_user('1111')
+    # @user = User.all
+    session['selected_user'] = params[:selected_user]
+    session['selected_user_name'] = params[:selected_user_name]
+    
+    respond_to do |format|
+      format.html { redirect_to events_url}
+      # format.html { render 'index'}
+    end
+  end
+  
 private
 # Use callbacks to share common setup or constraints between actions.
   def set_event

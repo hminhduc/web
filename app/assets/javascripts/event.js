@@ -31,7 +31,6 @@ $(function(){
     });
 });
 
-var user_search_code, user_search_name
 // init hinme search table
 $(function(){
     oTable = $('#user_table').DataTable({
@@ -53,8 +52,8 @@ $(function(){
     $('#user_table tbody').on( 'click', 'tr', function () {
 
         var d = oTable.row(this).data();
-        user_search_code = d[0];
-        user_search_name = d[1];
+        $('#selected_user').val(d[0]);
+        $('#selected_user_name').val(d[1]);
 
         if ( $(this).hasClass('selected') ) {
             $(this).removeClass('selected');
