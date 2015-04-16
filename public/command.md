@@ -130,7 +130,7 @@ DBVisual install
 (for revert generate command)  
 `rails d controller Shozai index`  
 
-rails generate model Article title:string text:text  
+`rails generate model Article title:string text:text`  
 (for revert generate command)  
 `rails d model Article title:string text:text`
 

@@ -29,23 +29,49 @@ $(function(){
     $('#search_user').click(function(){
         $('#select_user_modal').modal('show');
     });
+    
+    $('#joutai_search').click(function(){
+        $('#joutai_search_modal').modal('show');
+    });
+    
+    $('#basho_search').click(function(){
+        $('#basho_search_modal').modal('show');
+    });
+    
+    $('#koutei_search').click(function(){
+        $('#koutei_search_modal').modal('show');
+    });
+    
 });
 
-// init hinme search table
+// init search table
 $(function(){
     oTable = $('#user_table').DataTable({
-        "pagingType": "full_numbers"
-        // ,"scrollX": true,
-        // ,"scrollCollapse": true
+        "pagingType": "simple_numbers"
         ,"oLanguage":{
             "sUrl": "../../assets/resource/dataTable_ja.txt"
         }
-        // ,"columnDefs": [
-        //   {
-        //     "targets": [3,4,5],
-        //     "width": '15px'
-        //   }
-        // ]
+    });
+    
+    oBashoTable = $('#basho_table').DataTable({
+        "pagingType": "simple_numbers"
+        ,"oLanguage":{
+            "sUrl": "../../assets/resource/dataTable_ja.txt"
+        }
+    });
+    
+    oJoutaiTable = $('#joutai_table').DataTable({
+        "pagingType": "simple_numbers"
+        ,"oLanguage":{
+            "sUrl": "../../assets/resource/dataTable_ja.txt"
+        }
+    });
+    
+    oKouteiTable = $('#koutei_table').DataTable({
+        "pagingType": "simple_numbers"
+        ,"oLanguage":{
+            "sUrl": "../../assets/resource/dataTable_ja.txt"
+        }
     });
 
     //選択された行を判断
@@ -62,6 +88,64 @@ $(function(){
         else {
             oTable.$('tr.selected').removeClass('selected');
             oTable.$('tr.success').removeClass('success');
+            $(this).addClass('selected');
+            $(this).addClass('success');
+        }
+
+    } );
+    
+    //場所選択された行を判断
+    $('#basho_table tbody').on( 'click', 'tr', function () {
+
+        var d = oBashoTable.row(this).data();
+        $('#event_場所コード').val(d[0]);
+        $('#basho_name').text(d[1]);
+
+        if ( $(this).hasClass('selected') ) {
+            $(this).removeClass('selected');
+            $(this).removeClass('success');
+        }
+        else {
+            oBashoTable.$('tr.selected').removeClass('selected');
+            oBashoTable.$('tr.success').removeClass('success');
+            $(this).addClass('selected');
+            $(this).addClass('success');
+        }
+
+    } );
+    //状態選択された行を判断
+    $('#joutai_table tbody').on( 'click', 'tr', function () {
+
+        var d = oJoutaiTable.row(this).data();
+        $('#event_状態コード').val(d[0]);
+        $('#joutai_name').text(d[1]);
+
+        if ( $(this).hasClass('selected') ) {
+            $(this).removeClass('selected');
+            $(this).removeClass('success');
+        }
+        else {
+            oJoutaiTable.$('tr.selected').removeClass('selected');
+            oJoutaiTable.$('tr.success').removeClass('success');
+            $(this).addClass('selected');
+            $(this).addClass('success');
+        }
+
+    } );
+    //工程選択された行を判断
+    $('#koutei_table tbody').on( 'click', 'tr', function () {
+
+        var d = oKouteiTable.row(this).data();
+        $('#event_工程コード').val(d[0]);
+        $('#koutei_name').text(d[1]);
+
+        if ( $(this).hasClass('selected') ) {
+            $(this).removeClass('selected');
+            $(this).removeClass('success');
+        }
+        else {
+            oKouteiTable.$('tr.selected').removeClass('selected');
+            oKouteiTable.$('tr.success').removeClass('success');
             $(this).addClass('selected');
             $(this).addClass('success');
         }

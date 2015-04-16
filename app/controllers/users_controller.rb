@@ -8,6 +8,7 @@ class UsersController < ApplicationController
 
   def login
     session['user'] = ''
+    session['user_id'] = ''
   end
 
   # GET /users/1
@@ -56,6 +57,7 @@ class UsersController < ApplicationController
             Rails.logger.info 'login success'
             # format.html { redirect_to main_shozais_url }
             session['user'] = @user.担当者名称
+            session['user_id'] = @user.担当者コード
             session['selected_user'] = @user.担当者コード
             session['selected_user_name'] = @user.担当者名称
             format.html { redirect_to events_url }

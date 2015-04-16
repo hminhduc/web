@@ -1,6 +1,6 @@
 <%= form_for @event, html:{class: 'form-horizontal', role: :form, 'data-model' => 'event'} do |f| %>
     <% if @event.errors.any? %>
-        <div id="error_explanation">
+        <div id="error_explanation" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
           <h2><%= @event.errors.count %> エラーが発生しました:</h2>
           <ul>
             <% @event.errors.full_messages.each do |msg| %>
@@ -39,7 +39,13 @@
       <div class="col-sm-2">
         <%= f.text_field :状態コード, class: 'form-control' %>
       </div>
-      <span class="help-block"></span>
+      <div class="col-md-1">
+        <button class="btn btn-default" id="joutai_search" type="button">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>
+      </div>
+        <span class="control-label" id="joutai_name"></span>
+      <span class="help-block"><%= @hash_param[:joutai_name] %></span>
     </div>
     
     <div class="form-group">
@@ -47,6 +53,12 @@
       <div class="col-sm-2">
         <%= f.text_field :場所コード, class: 'form-control' %>
       </div>
+      <div class="col-md-1">
+        <button class="btn btn-default" id="basho_search" type="button">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>
+      </div>
+      <span id="basho_name"><%= @hash_param[:basho_name] %></span>
       <span class="help-block"></span>
     </div>
     
@@ -63,6 +75,12 @@
       <div class="col-sm-2">
         <%= f.text_field :所属コード, class: 'form-control' %>
       </div>
+      <div class="col-md-1">
+        <button class="btn btn-default" type="button">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>
+      </div>
+      <span></span>
       <span class="help-block"></span>
     </div>
     
@@ -71,6 +89,12 @@
       <div class="col-sm-2">
         <%= f.text_field :工程コード, class: 'form-control' %>
       </div>
+      <div class="col-md-1">
+        <button class="btn btn-default" id="koutei_search" type="button">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>
+      </div>
+      <span id="koutei_name"><%= @hash_param[:koutei_name] %></span>
       <span class="help-block"></span>
     </div>
     
@@ -90,9 +114,20 @@
       <span class="help-block"></span>
     </div>
 
-    <div class="form-group">
-      <div class="col-sm-2 col-sm-offset-2">
-        <%= f.submit '　登録　', class: 'btn btn-primary' %>
-      </div>
-    </div>
+    <% if session['selected_user'] == session['user_id'] %>
+        <div class="form-group">
+          <div class="col-sm-1 col-sm-offset-2">
+            <%= f.submit '　登録　', class: 'btn btn-primary' %>
+          </div>
+          <% if mode == 'edit' %>
+              <div class="col-sm-1">
+                <%= f.submit '　削除　', class: 'btn btn-default' %>
+              </div>
+          <% end %>
+        </div>
+    <% end %>
 <% end %>
+
+<%= render 'joutai_modal' %>
+<%= render 'basho_modal' %>
+<%= render 'koutei_modal' %>

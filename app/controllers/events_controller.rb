@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :set_event, only: [ :show, :edit, :update, :destroy]
+  before_action :set_param, only: [ :new, :edit]
 
   def index
     # @events = Event.all
@@ -8,11 +9,13 @@ class EventsController < ApplicationController
   end
   
   def edit
-    
+
   end
   
   def new
     @event = Event.new
+    @hash_param = { basho_name: '', koutei_name: '', joutai_name: '' }
+
   end
   
   def create
@@ -32,14 +35,24 @@ class EventsController < ApplicationController
   end
 
   def update
-    respond_to do |format|
-      if @event.update(event_params)
-        format.html { redirect_to events_url, notice: '更新成功できました。' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @kouteimaster.errors, status: :unprocessable_entity }
-      end
+    case params[:commit]
+      when '　削除　'
+        @event.destroy
+        respond_to do |format|
+          format.html { redirect_to events_url }
+          format.json { head :no_content }
+        end
+
+      when '　登録　'
+        respond_to do |format|
+          if @event.update(event_params)
+            format.html { redirect_to events_url, notice: '更新成功できました。' }
+            format.json { head :no_content }
+          else
+            format.html { render action: 'edit' }
+            format.json { render json: @kouteimaster.errors, status: :unprocessable_entity }
+          end
+        end
     end
 
   end
@@ -60,6 +73,18 @@ private
 # Use callbacks to share common setup or constraints between actions.
   def set_event
     @event = Event.find(params[:id])
+    basho = Bashomaster.find_by 場所コード: @event.場所コード
+    koutei = Kouteimaster.find_by 工程コード: @event.工程コード, 所属コード: @event.所属コード
+    joutai = Joutaimaster.find_by 状態コード: @event.状態コード
+    @hash_param = { basho_name: basho.場所名, koutei_name: koutei.工程名, joutai_name: joutai.状態名 }
+
+  end
+  
+  def set_param
+    @bashos = Bashomaster.all
+    @joutais = Joutaimaster.all
+    @kouteis = Kouteimaster.all
+
   end
 
 # Never trust parameters from the scary internet, only allow the white list through.
