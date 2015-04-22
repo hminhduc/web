@@ -17,10 +17,10 @@
           </thead>
 
           <tbody>
-          <% @user.each do |user| %>
+          <% @shains.each do |shain| %>
               <tr>
-                <td><%= user.担当者コード %></td>
-                <td><%= user.担当者名称 %></td>
+                <td><%= shain.社員番号 %></td>
+                <td><%= shain.氏名 %></td>
               </tr>
           <% end %>
           </tbody>

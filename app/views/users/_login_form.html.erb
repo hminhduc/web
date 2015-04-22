@@ -6,7 +6,7 @@
   <div class="form-group">
     <div class="field">
       <div class="col-md-12">
-        <%= f.text_field :担当者コード, class: 'form-control', placeholder: 'user name' %>
+        <%= f.text_field :担当者コード, class: 'form-control', placeholder: 'ユーザ名' %>
       </div>
     </div>
   </div>
@@ -14,7 +14,7 @@
   <div class="form-group">
     <div class="field">
       <div class="col-md-12">
-        <%= f.password_field :パスワード, class: 'form-control', placeholder: 'password' %>
+        <%= f.password_field :パスワード, class: 'form-control', placeholder: 'パスワード' %>
       </div>
     </div>
   </div>
@@ -27,13 +27,13 @@
   
   <div class="form-group">
     <div class="col-md-12">
-      <%= f.submit 'Sign in', class: 'btn btn-primary' %>
+      <%= f.submit 'ログイン', class: 'btn btn-primary' %>
     </div>
   </div>
 
 <% end %>
     <div class="col-md-7 col-md-offset-6">
-        <%= link_to 'Create account', new_user_path %>
+        <%= link_to '新規登録', new_user_path %>
     </div>
 
   </div>

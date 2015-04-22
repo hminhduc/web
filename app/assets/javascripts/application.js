@@ -25,14 +25,15 @@
 
 //= require jstree.min.js
 
-//= require moment.min.js
 //= require transition.js
 //= require collapse.js
-//= require bootstrap-datetimepicker.min.js
-//= require bootstrap-datetimepicker.ja.js
+// require bootstrap-datetimepicker.ja.js
 
 //= require bootstrap-maxlength.js
 //= require kouteimasters.js.coffee
+//= require moment
+//= require moment/ja
+//= require bootstrap-datetimepicker
 //= require fullcalendar
 
 // require_tree .

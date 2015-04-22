@@ -1,6 +1,7 @@
 class Event < ActiveRecord::Base
   self.table_name = 'events'
-  
+  validates :工程コード, presence: true
+
   def self.binding_event_by_change_user(user_id)
     sql = "SELECT a.*, b.場所名, c.状態名, d.工程名"
     sql << " FROM events a LEFT OUTER JOIN 場所マスタ b ON a.場所コード = b.場所コード"

@@ -5,7 +5,8 @@ class EventsController < ApplicationController
   def index
     # @events = Event.all
     @events = Event.binding_event_by_change_user(session['selected_user'])
-    @user = User.all
+    # @user = User.all
+    @shains = Shainmaster.all
   end
   
   def edit

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150402092042) do
+ActiveRecord::Schema.define(version: 20150422040239) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,6 +69,13 @@ ActiveRecord::Schema.define(version: 20150402092042) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "役職テープル", force: :cascade do |t|
+    t.string   "役職コード"
+    t.string   "役職名"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "所在マスタ", force: :cascade do |t|
     t.string   "所在コード",      limit: 255
     t.string   "所在名",        limit: 255
@@ -94,6 +101,17 @@ ActiveRecord::Schema.define(version: 20150402092042) do
     t.string   "色"
     t.string   "WEB使用区分"
     t.string   "勤怠使用区分"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "社員マスタ", force: :cascade do |t|
+    t.string   "社員番号"
+    t.string   "連携用社員番号"
+    t.string   "氏名"
+    t.string   "所属コード"
+    t.string   "直間区分"
+    t.string   "役職コード"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -15,6 +15,9 @@ gem 'bootstrap-sass'
 gem 'fullcalendar-rails'
 gem 'pg'
 gem 'activerecord-reset-pk-sequence'
+gem 'momentjs-rails', '>= 2.8.1'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.0.0'
+
 #gem 'debugger'
 
 #gem 'ruby-oci8'

@@ -29,7 +29,7 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     case params[:commit]
-      when 'Create'
+      when '登録'
         @user = User.new(user_params)
         respond_to do |format|
           if @user.save
@@ -43,7 +43,7 @@ class UsersController < ApplicationController
             # format.js { render 'show' }
           end
         end
-      when 'Sign in'
+      when 'ログイン'
         @user = User.where('担当者コード = ? AND パスワード = ?',params[:user][:担当者コード].downcase,params[:user][:パスワード]).first
 
         respond_to do |format|

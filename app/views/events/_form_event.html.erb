@@ -1,4 +1,4 @@
-<%= form_for @event, html:{class: 'form-horizontal', role: :form, 'data-model' => 'event'} do |f| %>
+<%= form_for @event , html:{class: 'form-horizontal', role: :form, 'data-model' => 'event'} do |f| %>
     <% if @event.errors.any? %>
         <div id="error_explanation" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
           <h2><%= @event.errors.count %> エラーが発生しました:</h2>
@@ -13,29 +13,32 @@
     <div class="form-group">
       <%= f.label :社員番号, class: 'col-sm-2 control-label' %>
       <div class="col-sm-2">
-        <%= f.text_field :社員番号, class: 'form-control' %>
+        <%= f.text_field :社員番号, class: 'form-control', value: session['user_id'] %>
       </div>
       <span id="shainbango" class="help-block"></span>
     </div>    
     
     <div class="form-group">
       <%= f.label :開始, class: 'col-sm-2 control-label' %>
-      <div class="col-sm-2">
-        <%= f.text_field :開始, class: 'form-control' %>
+      <div class="col-md-2">
+          <%= f.text_field :開始, class: 'form-control' %>
       </div>
+      
       <span id="start_date" class="help-block"></span>
     </div>
 
     <div class="form-group">
       <%= f.label :終了, class: 'col-sm-2 control-label' %>
-      <div class="col-sm-2">
+      
+      <div class="col-md-2">
         <%= f.text_field :終了, class: 'form-control' %>
       </div>
+      
       <span id="end_date" class="help-block"></span>
     </div>
 
     <div class="form-group">
-      <%= f.label :状態コード, class: 'col-sm-2 control-label' %>
+      <%= f.label :状態, class: 'col-sm-2 control-label' %>
       <div class="col-sm-2">
         <%= f.text_field :状態コード, class: 'form-control' %>
       </div>
@@ -44,12 +47,12 @@
           <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
         </button>
       </div>
-        <span class="control-label" id="joutai_name"></span>
-      <span class="help-block"><%= @hash_param[:joutai_name] %></span>
+        <span id="joutai_name"><%= @hash_param[:joutai_name] %></span>
+      <span class="help-block"></span>
     </div>
     
     <div class="form-group">
-      <%= f.label :場所コード, class: 'col-sm-2 control-label' %>
+      <%= f.label :場所, class: 'col-sm-2 control-label' %>
       <div class="col-sm-2">
         <%= f.text_field :場所コード, class: 'form-control' %>
       </div>
@@ -71,7 +74,7 @@
     </div>
     
     <div class="form-group">
-      <%= f.label :所属コード, class: 'col-sm-2 control-label' %>
+      <%= f.label :所属, class: 'col-sm-2 control-label' %>
       <div class="col-sm-2">
         <%= f.text_field :所属コード, class: 'form-control' %>
       </div>
@@ -85,7 +88,7 @@
     </div>
     
     <div class="form-group">
-      <%= f.label :工程コード, class: 'col-sm-2 control-label' %>
+      <%= f.label :工程, class: 'col-sm-2 control-label' %>
       <div class="col-sm-2">
         <%= f.text_field :工程コード, class: 'form-control' %>
       </div>
