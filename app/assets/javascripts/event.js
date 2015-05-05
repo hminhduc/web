@@ -23,15 +23,21 @@ $(function () {
         format: 'YYYY/MM/DD',
         widgetPositioning: {
             horizontal: 'left'
-        }
+        },
+        showTodayButton: true
     });
+    //date_goto.showTodayButton(true);
     
     $('#event_開始').datetimepicker({
         format: 'YYYY/MM/DD h:m'
+        ,showTodayButton: true
+
     });
     
     $('#event_終了').datetimepicker({
         format: 'YYYY/MM/DD h:m'
+        ,showTodayButton: true
+
     });
 
     $("#event_開始").on("dp.change", function (e) {
@@ -101,12 +107,33 @@ $(function(){
             "sUrl": "../../assets/resource/dataTable_ja.txt"
         }
     });
-    
+
     oEventTable = $('#event_table').DataTable({
         "pagingType": "simple_numbers"
         ,"oLanguage":{
             "sUrl": "../../assets/resource/dataTable_ja.txt"
         }
+        ,"aoColumnDefs": [{
+            "aTargets": [0],
+            "mRender": function (data, type, full) {
+                return '<a href="/events/' + data + '/edit">詳細</a>';
+            }
+        }
+            ,{ "bSortable": false, "aTargets": [ 0 ]}
+            ,{
+                "targets": [ 0 ],
+                //"visible": false,
+                "searchable": false
+            }
+
+        ]
+        , 
+        "order": [],
+        "columnDefs": [ {
+            "targets"  : 'no-sort',
+            "orderable": false
+        }]
+
     });
 
     //選択された行を判断
@@ -171,6 +198,8 @@ $(function(){
     $('#koutei_table tbody').on( 'click', 'tr', function () {
 
         var d = oKouteiTable.row(this).data();
+        //$('#event_所属コード').val(d[0]);
+        //$('#shozoku_name').val(d[1]);
         $('#event_工程コード').val(d[0]);
         $('#koutei_name').text(d[1]);
 
@@ -239,3 +268,67 @@ $(function () {
     }
 
 }(jQuery));
+
+// keydown trigger
+$(function(){
+    $('#event_状態コード').keydown( function(e) {
+        if (e.keyCode == 9 && !e.shiftKey) {
+            var event_状態コード = $('#event_状態コード').val();
+            jQuery.ajax({
+                url: '../ajax',
+                data: {id: 'event_状態コード',event_状態コード: event_状態コード},
+                type: "POST",
+                // processData: false,
+                // contentType: 'application/json',
+                success: function(data) {
+                    $('#joutai_name').text(data.joutai_name);
+                    console.log("getAjax joutai_name:"+ data.joutai_name);
+                },
+                failure: function() {
+                    console.log("event_状態コード keydown Unsuccessful");
+                }
+            });
+        }
+    });
+
+    $('#event_場所コード').keydown( function(e) {
+        if (e.keyCode == 9 && !e.shiftKey) {
+            var event_場所コード = $('#event_場所コード').val();
+            jQuery.ajax({
+                url: '../ajax',
+                data: {id: 'event_場所コード',event_場所コード: event_場所コード},
+                type: "POST",
+                // processData: false,
+                // contentType: 'application/json',
+                success: function(data) {
+                    $('#basho_name').text(data.basho_name);
+                    console.log("getAjax basho_name:"+ data.basho_name);
+                },
+                failure: function() {
+                    console.log("event_場所コード keydown Unsuccessful");
+                }
+            });
+        }
+    });
+
+    $('#event_工程コード').keydown( function(e) {
+        if (e.keyCode == 9 && !e.shiftKey) {
+            var event_工程コード = $('#event_工程コード').val();
+            jQuery.ajax({
+                url: '../ajax',
+                data: {id: 'event_工程コード',event_工程コード: event_工程コード},
+                type: "POST",
+                // processData: false,
+                // contentType: 'application/json',
+                success: function(data) {
+                    $('#koutei_name').text(data.koutei_name);
+                    console.log("getAjax koutei_name:"+ data.koutei_name);
+                },
+                failure: function() {
+                    console.log("event_工程コード keydown Unsuccessful");
+                }
+            });
+        }
+    });
+
+});

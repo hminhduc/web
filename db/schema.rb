@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150422040239) do
+ActiveRecord::Schema.define(version: 20150423012853) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -81,6 +81,13 @@ ActiveRecord::Schema.define(version: 20150422040239) do
     t.string   "所在名",        limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "所属マスタ", force: :cascade do |t|
+    t.string   "所属コード"
+    t.string   "所属名"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "担当者マスタ", force: :cascade do |t|

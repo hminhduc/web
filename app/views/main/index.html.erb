@@ -1,36 +1,73 @@
-<div class="col-md-12">
-<ol class="breadcrumb">
-  <li class="active">メニュー</li>
-  <!-- <li><a href="#">基準情報</a></li> -->
-  <!-- <li><a href="#">セキュリティ管理</a></li> -->
-  <!-- <li class="active">担当者</li> -->
-</ol>
+<!--<div class="col-md-12">-->
+<!--<ol class="breadcrumb">-->
+  <!--<li class="active">メニュー</li>-->
+  <!--&lt;!&ndash; <li><a href="#">基準情報</a></li> &ndash;&gt;-->
+  <!--&lt;!&ndash; <li><a href="#">セキュリティ管理</a></li> &ndash;&gt;-->
+  <!--&lt;!&ndash; <li class="active">担当者</li> &ndash;&gt;-->
+<!--</ol>-->
+<!--</div>-->
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">メインメニュー</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-3">
+        <ul class="list-group">
+          <li class="list-group-item"><%= link_to 'カレンダー', events_path %> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
 
-  <div class="row">
-    <div class="col-md-12">
-<!--    <div class="col-md-5">
-
-      <div class="well">
-        <button type="button" class="btn btn-primary">ma
-          　展 開　
-        </button>
-      </div>
-    </div>
- -->
-    <div class="col-md-7">
-      <!-- <div class="well"> -->
-      <ul class="list-group">
-        <li class="list-group-item"><%= link_to 'カレンダー', events_path %></li>
-        <!--<li class="list-group-item"><%# link_to 'JOB管理', shozais_path %></li>-->
-        <li class="list-group-item"><%= link_to '工程マスタ', kouteimasters_path %> </li>
-        <li class="list-group-item"><%= link_to 'Tree', tree_path %> </li>
-        <!--<li class="list-group-item"><%# link_to 'メール送受信', email_path %> </li>-->
-        <li class="list-group-item"><%= link_to 'ファイルアップロード', uploadFile_path %> </li>
-        <li class="list-group-item"><%= link_to 'ScrollVertical', scroll_path %> </li>
-        <li class="list-group-item"><%= link_to 'MultiSelect', employers_path %> </li>
-      </ul>
-      <!-- </div> -->
-    </div>
-      </div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">マスタ管理</h3>
   </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-3">
+        <ul class="list-group">
+          <li class="list-group-item"><%= link_to '工程マスタ', kouteimasters_path %> </li>
+          <li class="list-group-item"><%= link_to '社員マスタ', kouteimasters_path %> </li>
+          <li class="list-group-item"><%= link_to '所属マスタ', kouteimasters_path %> </li>
+          <li class="list-group-item"><%= link_to '担当者マスタ', kouteimasters_path %> </li>
+          <li class="list-group-item"><%= link_to '状態マスタ', kouteimasters_path %> </li>
+          <li class="list-group-item"><%= link_to '役職テープル', kouteimasters_path %> </li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="list-group">
+          <li class="list-group-item"><%= link_to 'Tree', tree_path %> </li>
+          <li class="list-group-item"><%= link_to 'ファイルアップロード', uploadFile_path %> </li>
+          <li class="list-group-item"><%= link_to 'ScrollVertical', scroll_path %> </li>
+          <li class="list-group-item"><%= link_to 'MultiSelect', employers_path %> </li>
+          <li class="list-group-item"><%= link_to '...', kouteimasters_path %> </li>
+          <li class="list-group-item"><%= link_to '...', kouteimasters_path %> </li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="list-group">
+          <li class="list-group-item"><%= link_to '...', kouteimasters_path %> </li>
+          <li class="list-group-item"><%= link_to '...', kouteimasters_path %> </li>
+          <li class="list-group-item"><%= link_to '...', kouteimasters_path %> </li>
+          <li class="list-group-item"><%= link_to '...', kouteimasters_path %> </li>
+          <li class="list-group-item"><%= link_to '...', kouteimasters_path %> </li>
+          <li class="list-group-item"><%= link_to '...', kouteimasters_path %> </li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="list-group">
+          <li class="list-group-item"><%= link_to '...', kouteimasters_path %> </li>
+          <li class="list-group-item"><%= link_to '...', kouteimasters_path %> </li>
+          <li class="list-group-item"><%= link_to '...', kouteimasters_path %> </li>
+          <li class="list-group-item"><%= link_to '...', kouteimasters_path %> </li>
+          <li class="list-group-item"><%= link_to '...', kouteimasters_path %> </li>
+          <li class="list-group-item"><%= link_to '...', kouteimasters_path %> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

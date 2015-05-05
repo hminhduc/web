@@ -9,6 +9,7 @@ Jpt::Application.routes.draw do
   resources :events, only: [:index, :new, :create, :edit, :update] do
 		collection do
 			post :change_user
+			post :ajax
 		end
 	end
 	

@@ -1,5 +1,8 @@
 class Event < ActiveRecord::Base
   self.table_name = 'events'
+  validates :開始, presence: true
+  validates :状態コード, presence: true
+  validates :場所コード, presence: true
   validates :工程コード, presence: true
 
   def self.binding_event_by_change_user(user_id)
@@ -9,6 +12,11 @@ class Event < ActiveRecord::Base
     sql << " LEFT OUTER JOIN 工程マスタ d on a.所属コード = d.所属コード and a.工程コード = d.工程コード"
     sql << " WHERE a.社員番号 = '#{user_id}'"
     @events = Event.find_by_sql(sql) 
-    return @events
+    # @events.each do |event|
+    #   if event.終了.nil?
+    #     event.終了 = Date.tomorrow.to_s
+    #   end
+    # end
+    # return @events
   end
 end

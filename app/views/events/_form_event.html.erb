@@ -15,6 +15,15 @@
       <div class="col-sm-2">
         <%= f.text_field :社員番号, class: 'form-control', value: session['user_id'] %>
       </div>
+      
+      <% if mode != 'new' %>
+            <%= f.label :計上, class: 'col-sm-2 control-label' %>
+            <!--<div class="col-sm-2">-->
+              <%# f.text_field :計上, class: 'form-control' %>
+              <span class="col-sm-1 control-label"><%= @event.計上 %>　　　　</span>
+            <!--</div>-->
+      <% end  %>
+      
       <span id="shainbango" class="help-block"></span>
     </div>    
     
@@ -73,19 +82,7 @@
       <span class="help-block"></span>
     </div>
     
-    <div class="form-group">
-      <%= f.label :所属, class: 'col-sm-2 control-label' %>
-      <div class="col-sm-2">
-        <%= f.text_field :所属コード, class: 'form-control' %>
-      </div>
-      <div class="col-md-1">
-        <button class="btn btn-default" type="button">
-          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-        </button>
-      </div>
-      <span></span>
-      <span class="help-block"></span>
-    </div>
+    <%= f.hidden_field :所属コード, class: 'form-control' %>
     
     <div class="form-group">
       <%= f.label :工程, class: 'col-sm-2 control-label' %>
@@ -109,15 +106,7 @@
       <span class="help-block"></span>
     </div>
     
-    <div class="form-group">
-      <%= f.label :計上, class: 'col-sm-2 control-label' %>
-      <div class="col-sm-2">
-        <%= f.text_field :計上, class: 'form-control' %>
-      </div>
-      <span class="help-block"></span>
-    </div>
-
-    <% if session['selected_user'] == session['user_id'] %>
+    <% if session['selected_user'] == session['user_id'] && @event.計上 != '済' %>
         <div class="form-group">
           <div class="col-sm-1 col-sm-offset-2">
             <%= f.submit '　登録　', class: 'btn btn-primary' %>
