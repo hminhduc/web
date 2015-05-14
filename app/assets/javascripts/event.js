@@ -27,15 +27,13 @@ $(function () {
         showTodayButton: true
     });
     //date_goto.showTodayButton(true);
-    
     $('#event_開始').datetimepicker({
-        format: 'YYYY/MM/DD h:m'
+        format: 'YYYY/MM/DD HH:m'
         ,showTodayButton: true
-
     });
     
     $('#event_終了').datetimepicker({
-        format: 'YYYY/MM/DD h:m'
+        format: 'YYYY/MM/DD HH:m'
         ,showTodayButton: true
 
     });
@@ -49,7 +47,7 @@ $(function () {
     });
 });
 
-//button handel
+//button handle
 $(function(){
 
     $('#goto-date-button').click(function() {
@@ -113,12 +111,23 @@ $(function(){
         ,"oLanguage":{
             "sUrl": "../../assets/resource/dataTable_ja.txt"
         }
-        ,"aoColumnDefs": [{
+        ,"aoColumnDefs": [
+            {
             "aTargets": [0],
             "mRender": function (data, type, full) {
                 return '<a href="/events/' + data + '/edit">詳細</a>';
+                }
+            },
+            {
+            "aTargets": [1,2],
+            "mRender": function (data, type, full) {
+                var time_format = moment(data, 'YYYY-MM-DD HH:mm').format('YYYY/MM/DD HH:mm');
+                if (time_format !== 'Invalid date'){
+                    return time_format;
+                    }else return '';
+                
+                }
             }
-        }
             ,{ "bSortable": false, "aTargets": [ 0 ]}
             ,{
                 "targets": [ 0 ],
@@ -275,7 +284,7 @@ $(function(){
         if (e.keyCode == 9 && !e.shiftKey) {
             var event_状態コード = $('#event_状態コード').val();
             jQuery.ajax({
-                url: '../ajax',
+                url: '/events/ajax',
                 data: {id: 'event_状態コード',event_状態コード: event_状態コード},
                 type: "POST",
                 // processData: false,
@@ -295,7 +304,7 @@ $(function(){
         if (e.keyCode == 9 && !e.shiftKey) {
             var event_場所コード = $('#event_場所コード').val();
             jQuery.ajax({
-                url: '../ajax',
+                url: '/events/ajax',
                 data: {id: 'event_場所コード',event_場所コード: event_場所コード},
                 type: "POST",
                 // processData: false,
@@ -315,7 +324,7 @@ $(function(){
         if (e.keyCode == 9 && !e.shiftKey) {
             var event_工程コード = $('#event_工程コード').val();
             jQuery.ajax({
-                url: '../ajax',
+                url: '/events/ajax',
                 data: {id: 'event_工程コード',event_工程コード: event_工程コード},
                 type: "POST",
                 // processData: false,

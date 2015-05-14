@@ -13,7 +13,11 @@ Jpt::Application.routes.draw do
 		end
 	end
 	
-  resources :kouteimasters
+  resources :kouteimasters do
+    collection do
+      post :ajax
+    end
+  end
 
   # get "shozais/index"
   post "shozais/select"

@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [ :show, :edit, :update, :destroy]
   before_action :set_param, only: [ :create, :new, :show, :edit, :update, :destroy]
+  before_action :init, only: [ :create, :new, :edit, :update]
 
   helper EventsHelper
   
@@ -12,17 +13,29 @@ class EventsController < ApplicationController
   end
   
   def edit
-
+    init
   end
   
   def new
     @event = Event.new
     @hash_param = { basho_name: '', koutei_name: '', joutai_name: '' }
-
+    init
   end
   
   def create
     @event = Event.new(event_params)
+    # Check param before submit
+    
+    params_valid
+    
+    if @errors.any?
+      respond_to do |format|
+        init_hash_name
+        format.html {render action: 'new'}
+      end
+      return
+    end
+    
     respond_to do |format|
       if @event.save
         Rails.logger.info 'Event created'
@@ -50,6 +63,17 @@ class EventsController < ApplicationController
         end
 
       when '　登録　'
+        # Check param before submit
+        params_valid
+
+        if @errors.any?
+          respond_to do |format|
+            # init_hash_name
+            format.html {render action: 'edit'}
+          end
+          return
+        end
+        # ----
         respond_to do |format|
           if @event.update(event_params)
             format.html { redirect_to events_url, notice: '更新成功できました。' }
@@ -134,4 +158,40 @@ private
   def event_params
     params.require(:event).permit(:社員番号, :開始, :終了, :状態コード, :場所コード, :JOB, :所属コード, :工程コード, :工数, :計上)
   end
+  
+  def init
+    @errors = []
+  end
+  
+  def init_hash_name
+    @hash_param = { basho_name: '', koutei_name: '', joutai_name: '' }
+  end
+
+  def params_valid
+    joutai_valid = params[:event][:状態コード].in?(Joutaimaster.pluck(:状態コード))
+    if !joutai_valid
+      @errors.append ('状態コードが間違っています')
+    end
+
+    basho_valid = params[:event][:場所コード].in?(Bashomaster.pluck(:場所コード))
+    if !basho_valid
+      @errors.append ('場所コードが間違っています')
+    end
+
+    # shain = Shainmaster.find_by 連携用社員番号: session['user_id']
+    # shozoku_code = shain.try(:所属コード)
+    # 
+    # kouteis = Kouteimaster.find_by(所属コード: shozoku_code)
+    # kouteicode = []
+    # kouteis.each do |koutei|
+    #   kouteicode.append koutei.工程コード
+    # end
+    # 
+    # koutei_valid = params[:event][:工程コード].in?(kouteicode)
+    # if !koutei_valid
+    #   @errors.append ['工程コードが間違っています']
+    # end
+
+  end
+  
 end
