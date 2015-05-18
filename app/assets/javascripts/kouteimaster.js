@@ -147,3 +147,9 @@ $(function(){
         }
     });
 });
+
+//Add maxlength display
+$(function(){
+    $('input[maxlength]').maxlength();
+
+});

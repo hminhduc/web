@@ -1,0 +1,36 @@
+<%= javascript_include_tag 'shain' %>
+<ol class="breadcrumb">
+  <li><%= link_to 'メニュー', main_path %></li>
+  <!-- <li><a href="#">基準情報</a></li> -->
+  <!-- <li><a href="#">セキュリティ管理</a></li> -->
+  <li class="active">社員マスタ</li>
+</ol>
+
+<!-- <h1>工程マスタ</h1> -->
+
+<table id="shainmaster" class="table table-striped table-bordered table-hover" cellspacing="0">
+
+  <thead>
+  <tr>
+    <th>社員番号</th>
+    <th>連携用社員番号</th>
+    <th>氏名</th>
+    <th>所属コード</th>
+    <th>直間区分</th>
+    <th>役職コード</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @shains.each do |shain| %>
+      <tr id="shain_<%= shain.id %>">
+      <td><%= shain.社員番号 %></td>
+        <td><%= shain.連携用社員番号 %></td>
+        <td><%= shain.氏名 %></td>
+        <td><%= shain.所属コード %></td>
+        <td><%= shain.直間区分 %></td>
+        <td><%= shain.役職コード %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

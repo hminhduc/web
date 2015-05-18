@@ -134,8 +134,8 @@ private
   def set_event
     @event = Event.find(params[:id])
     basho = Bashomaster.find_by 場所コード: @event.場所コード
-    koutei = Kouteimaster.find_by 工程コード: @event.工程コード, 所属コード: @event.所属コード
     joutai = Joutaimaster.find_by 状態コード: @event.状態コード
+    koutei = Kouteimaster.find_by 工程コード: @event.工程コード, 所属コード: @event.所属コード
     
     basho_name = basho.try(:場所名)
     koutei_name = koutei.try(:工程名)
@@ -168,29 +168,24 @@ private
   end
 
   def params_valid
-    joutai_valid = params[:event][:状態コード].in?(Joutaimaster.pluck(:状態コード))
+    joutai_valid = params[:event][:状態コード].in? Joutaimaster.pluck :状態コード
     if !joutai_valid
-      @errors.append ('状態コードが間違っています')
+      @errors.append '状態コードが間違っています'
     end
 
-    basho_valid = params[:event][:場所コード].in?(Bashomaster.pluck(:場所コード))
+    basho_valid = params[:event][:場所コード].in? Bashomaster.pluck :場所コード
     if !basho_valid
-      @errors.append ('場所コードが間違っています')
+      @errors.append '場所コードが間違っています'
     end
 
-    # shain = Shainmaster.find_by 連携用社員番号: session['user_id']
-    # shozoku_code = shain.try(:所属コード)
-    # 
-    # kouteis = Kouteimaster.find_by(所属コード: shozoku_code)
-    # kouteicode = []
-    # kouteis.each do |koutei|
-    #   kouteicode.append koutei.工程コード
-    # end
-    # 
-    # koutei_valid = params[:event][:工程コード].in?(kouteicode)
-    # if !koutei_valid
-    #   @errors.append ['工程コードが間違っています']
-    # end
+    shozoku_code = Shainmaster.find_by(連携用社員番号: session['user_id']).try :所属コード
+    
+    kouteis = Kouteimaster.where 所属コード: shozoku_code
+    
+    koutei_valid = params[:event][:工程コード].in? kouteis.pluck :工程コード
+    if !koutei_valid
+      @errors.append '工程コードが間違っています'
+    end
 
   end
   

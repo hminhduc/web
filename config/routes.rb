@@ -1,5 +1,16 @@
 Jpt::Application.routes.draw do
 
+  resources :shainmasters, only: [:index] do
+    
+  end
+  
+  resources :shozokumasters, only: [:index] do
+    
+  end
+  resources :joutaimasters, only: [:index] do
+    
+  end
+
   # get 'events/index'
 
   get 'joutaimasters/index'

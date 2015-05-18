@@ -29,7 +29,7 @@
   <div class="form-group">
     <%= f.label :所属コード, class: 'col-sm-2 control-label' %>
     <div class="col-sm-2">
-      <%= f.text_field :所属コード, class: 'form-control' %>
+      <%= f.text_field :所属コード, class: 'form-control', maxlength: 10 %>
     </div>
     <div class="col-md-1">
       <button class="btn btn-default" id="shozoku_search" type="button">
@@ -43,7 +43,7 @@
   <div class="form-group">
     <%= f.label :工程コード, class: 'col-sm-2 control-label' %>
     <div class="col-sm-2">
-      <%= f.text_field :工程コード, class: 'form-control' %>
+      <%= f.text_field :工程コード, class: 'form-control', maxlength: 10 %>
     </div>
     <span id="kouteiname" class="help-block"></span>
   </div>
