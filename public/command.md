@@ -159,3 +159,6 @@ Create a seeds.rb on db folder and write insert code to auto insert data to tabl
 
 ##To create a new Rails application to use PostgreSQL:
 `$ rails new myapp --database=postgresql`
+
+##Kill server
+`kill -9 processid`
