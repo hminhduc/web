@@ -39,7 +39,7 @@ class EventsController < ApplicationController
     respond_to do |format|
       if @event.save
         Rails.logger.info 'Event created'
-        format.html { redirect_to events_url, notice: '新規成功出来ました。' }
+        format.html { redirect_to events_url, notice: '新規成功作成出来ました。' }
       else
         Rails.logger.info 'Event uncreated'
         @hash_param = { basho_name: '', koutei_name: '', joutai_name: '' }
@@ -76,7 +76,7 @@ class EventsController < ApplicationController
         # ----
         respond_to do |format|
           if @event.update(event_params)
-            format.html { redirect_to events_url, notice: '更新成功できました。' }
+            format.html { redirect_to events_url, notice: '更新成功作成できました。' }
             format.json { head :no_content }
           else
             format.html { render action: 'edit' }

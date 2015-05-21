@@ -43,6 +43,8 @@ production:
   # password: YAYOI
 
   adapter: postgresql
+  encoding: unicode
+  host: localhost
   database: duc
   username: duc
   password: duc

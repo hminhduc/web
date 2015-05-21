@@ -1,6 +1,11 @@
 source 'https://rubygems.org'
+ruby '2.2.0'
+
 gem 'rails'
 # gem 'sqlite3'
+
+gem 'sinatra', '1.1.0'
+gem 'passenger', '>= 5.0.4'
 
 gem 'sass-rails', '~> 4.0.3'
 gem 'sprockets', '2.11.0'
@@ -10,14 +15,14 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
-gem 'thin'
+# gem 'thin'
 gem 'bootstrap-sass'
 gem 'fullcalendar-rails'
 gem 'pg'
 gem 'activerecord-reset-pk-sequence'
 gem 'momentjs-rails', '>= 2.8.1'
 gem 'bootstrap3-datetimepicker-rails', '~> 4.0.0'
-gem 'enum_help'
+# gem 'enum_help'
 
 #gem 'debugger'
 

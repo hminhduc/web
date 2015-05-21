@@ -10,6 +10,9 @@ Jpt::Application.routes.draw do
   resources :joutaimasters, only: [:index] do
     
   end
+resources :bashomasters, only: [:index] do
+    
+  end
 
   # get 'events/index'
 

@@ -1,0 +1,36 @@
+<%= javascript_include_tag 'basho' %>
+<ol class="breadcrumb">
+  <li><%= link_to 'メニュー', main_path %></li>
+  <!-- <li><a href="#">基準情報</a></li> -->
+  <!-- <li><a href="#">セキュリティ管理</a></li> -->
+  <li class="active">場所マスタ</li>
+</ol>
+
+<!-- <h1>工程マスタ</h1> -->
+
+<table id="bashomaster" class="table table-striped table-bordered table-hover" cellspacing="0">
+
+  <thead>
+  <tr>
+    <th>社員番号</th>
+    <th>場所コード</th>
+    <th>場所名カナ</th>
+    <th>SUB</th>
+    <th>場所区分</th>
+    <th>会社コード</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @bashos.each do |basho| %>
+      <tr id="basho<%= basho.id %>">
+        <td><%= basho.社員番号 %></td>
+        <td><%= basho.場所コード %></td>
+        <td><%= basho.場所名カナ %></td>
+        <td><%= basho.SUB %></td>
+        <td><%= basho.場所区分 %></td>
+        <td><%= basho.会社コード %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
